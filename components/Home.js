@@ -35,18 +35,18 @@ const Home = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      <AddItem addItem={addItem} />
+      {/* <AddItem addItem={addItem} />
       <FlatList
         data={items}
         renderItem={({item}) => (
           <ListItem item={item} deleteItem={deleteItem} />
         )}
-      />
+      /> */}
 
       <Button
         style={styles.button}
-        title="Go to Jane's profile"
-        onPress={() => navigation.navigate('Profile', {name: 'Jane'})}
+        title="Let's do Compline"
+        onPress={() => navigation.navigate('Compline', {name: 'Jane'})}
       />
     </View>
   );

@@ -9,7 +9,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import Home from './components/Home';
-import Profile from './components/Profile';
+import Compline from './components/Compline';
 
 const Stack = createStackNavigator();
 
@@ -45,7 +45,7 @@ const App = () => {
           component={Home}
           options={{title: 'Welcome'}}
         />
-        <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="Compline" component={Compline} />
       </Stack.Navigator>
     </NavigationContainer>
   );
