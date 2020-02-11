@@ -1,19 +1,15 @@
 /**
  * My
  */
-import 'react-native-gesture-handler';
 
 import React, {useState} from 'react';
-import {View, Text, StyleSheet, FlatList, Alert} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
+import {View, Text, StyleSheet, FlatList, Alert, Button} from 'react-native';
 
-import Home from './components/Home';
-import Profile from './components/Profile';
+import Header from './Header';
+import ListItem from './ListItem';
+import AddItem from './AddItem';
 
-const Stack = createStackNavigator();
-
-const App = () => {
+const Home = ({navigation}) => {
   const [items, setItems] = useState([
     {id: '1', text: 'Morning'},
     {id: '2', text: 'Noonday'},
@@ -38,16 +34,21 @@ const App = () => {
   };
 
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Home"
-          component={Home}
-          options={{title: 'Welcome'}}
-        />
-        <Stack.Screen name="Profile" component={Profile} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <View style={styles.container}>
+      <AddItem addItem={addItem} />
+      <FlatList
+        data={items}
+        renderItem={({item}) => (
+          <ListItem item={item} deleteItem={deleteItem} />
+        )}
+      />
+
+      <Button
+        style={styles.button}
+        title="Go to Jane's profile"
+        onPress={() => navigation.navigate('Profile', {name: 'Jane'})}
+      />
+    </View>
   );
 };
 
@@ -59,6 +60,11 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 20,
   },
+  button: {
+    flex: 1,
+    padding: 10,
+    marginBottom: 50,
+  },
 });
 
-export default App;
+export default Home;
