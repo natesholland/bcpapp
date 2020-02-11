@@ -15,7 +15,7 @@ const Header = ({title}) => {
 
 Header.defaultProps = {
   title: 'BCP App',
-}
+};
 
 const styles = StyleSheet.create({
   header: {

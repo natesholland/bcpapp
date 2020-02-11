@@ -1,5 +1,5 @@
 /**
- * My 
+ * My
  */
 
 import React, {useState} from 'react';
@@ -22,7 +22,7 @@ const App = () => {
       {/* <Text style={styles.text}> Hello Cassie you are beautiful</Text> */}
       <FlatList
         data={items}
-        renderItem={({item}) => <ListItem item={item}/>}
+        renderItem={({item}) => <ListItem item={item} />}
       />
     </View>
   );

@@ -57,3 +57,7 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+
+
+# Nate here, you might be being stupid:
+ios/bcpapp.xcworkspace/xcshareddata/
