@@ -1,6 +1,10 @@
 {
   "name": "bcpapp",
   "version": "0.0.1",
+  "engines": {
+    "node": "8.13.0",
+    "npm": "6.x"
+  },
   "private": true,
   "scripts": {
     "android": "react-native run-android",
