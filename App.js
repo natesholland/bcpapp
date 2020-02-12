@@ -3,39 +3,21 @@
  */
 import 'react-native-gesture-handler';
 
-import React, {useState} from 'react';
-import {View, Text, StyleSheet, FlatList, Alert} from 'react-native';
+import React from 'react';
+import {StyleSheet} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import Home from './components/Home';
 import Compline from './components/Compline';
+import Psalm4 from './components/psalms/Psalm4';
+import Psalm31 from './components/psalms/Psalm31';
+import Psalm91 from './components/psalms/Psalm91';
+import Psalm134 from './components/psalms/Psalm134';
 
 const Stack = createStackNavigator();
 
 const App = () => {
-  const [items, setItems] = useState([
-    {id: '1', text: 'Morning'},
-    {id: '2', text: 'Noonday'},
-    {id: '3', text: 'Evening'},
-    {id: '4', text: 'Compline'},
-  ]);
-
-  const deleteItem = id => {
-    setItems(prevItems => {
-      return prevItems.filter(item => item.id != id);
-    });
-  };
-
-  const addItem = text => {
-    if (!text) {
-      Alert.alert('Error', 'Please enter an item');
-    } else {
-      setItems(prevItems => {
-        return [{id: Math.random(), text: text}, ...prevItems];
-      });
-    }
-  };
 
   return (
     <NavigationContainer>
@@ -46,6 +28,10 @@ const App = () => {
           options={{title: 'Welcome'}}
         />
         <Stack.Screen name="Compline" component={Compline} />
+        <Stack.Screen name="Psalm 4" component={Psalm4} />
+        <Stack.Screen name="Psalm 31" component={Psalm31} />
+        <Stack.Screen name="Psalm 91" component={Psalm91} />
+        <Stack.Screen name="Psalm 134" component={Psalm134} />
       </Stack.Navigator>
     </NavigationContainer>
   );

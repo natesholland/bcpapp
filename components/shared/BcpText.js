@@ -1,19 +1,18 @@
 /**
- * For the Italics
+ * Base class for Text
  */
 
 import React from 'react';
 import {Text, StyleSheet} from 'react-native';
 
-const Italic = ({children}) => {
+const BcpText = ({children}) => {
   return <Text style={styles.text}>{children}</Text>;
 };
 
 const styles = StyleSheet.create({
   text: {
-    fontStyle: 'italic',
-    fontSize: 13,
+    fontSize: 15,
   },
 });
 
-export default Italic;
+export default BcpText;
