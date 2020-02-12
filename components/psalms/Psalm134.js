@@ -1,20 +1,26 @@
 import React from 'react';
 import {SafeAreaView, ScrollView, StyleSheet} from 'react-native';
+import HTML from 'react-native-render-html';
 
 import BcpText from '../shared/BcpText';
 import PsalmHeader from './PsalmHeader';
 
 const Psalm134 = ({navigator, name}) => {
+  const psalmText = `
+  <p>1
+&nbsp;&nbsp; Behold now, bless the L<span style="font-size: small">ORD</span>, all you servants of the L<span style="font-size: small">ORD</span>, *<br/>
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; you that stand by night in the house of the <small>LORD</small>.</p>
+
+<p>2
+&nbsp;&nbsp; Lift up your hands in the holy place and bless the L<span style="font-size: small">ORD</span>; *<br/>
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; the L<span style="font-size: small">ORD</span> who made heaven and earth bless you out of Zion.<br/>
+<br/></p>
+  `
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.container}>
         <PsalmHeader title="Psalm 134" annotation="Qui habitat" />
-        <BcpText>
-          1 Behold now, bless the LORD, all you servants of the LORD, * you that
-          stand by night in the house of the LORD. 2 Lift up your hands in the
-          holy place and bless the LORD; * the LORD who made heaven and earth
-          bless you out of Zion.
-        </BcpText>
+        <HTML html={psalmText} />
         <BcpText />
       </ScrollView>
     </SafeAreaView>
