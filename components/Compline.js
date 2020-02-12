@@ -3,7 +3,8 @@
  */
 
 import React from 'react';
-import {SafeAreaView, ScrollView, StyleSheet, Button} from 'react-native';
+import {SafeAreaView, ScrollView, StyleSheet, Button, View, Text} from 'react-native';
+import HTML from 'react-native-render-html';
 
 import Italic from './shared/Italic';
 import BcpText from './shared/BcpText';
@@ -11,90 +12,86 @@ import Spacer from './shared/Spacer';
 import People from './shared/People';
 
 const Compline = ({navigation, name}) => {
+  const prePsalmContent = `
+  <p class="rubric" id="sentences">The Officiant begins</p>
+
+<p>The Lord Almighty grant us a peaceful night and a perfect<br/>
+end. <em>Amen.</em></p>
+
+<table class="vrtable">
+	<tr>
+		<td class="vrpeople">Officiant</td>
+		<td>Our help is in the Name of the Lord;</td>
+	</tr>
+	<tr>
+		<td class="vrpeople">People</td>
+		<td>The maker of heaven and earth.</td>
+	</tr>
+</table>
+
+<p class="rubric">The Officiant may then say</p>
+
+<p id="confession">Let us confess our sins to God.</p>
+
+<p class="rubric">Silence may be kept.</p>
+
+<p class="rubric">Officiant and People</p>
+
+<p>Almighty God, our heavenly Father:<br/>
+We have sinned against you,<br/>
+through our own fault,<br/>
+in thought, and word, and deed,<br/>
+and in what we have left undone.<br/>
+For the sake of your Son our Lord Jesus Christ,<br/>
+forgive us all our offenses;<br/>
+and grant that we may serve you<br/>
+in newness of life,<br/>
+to the glory of your Name. Amen.<br/>
+</p>
+<p class="rubric">Officiant</p>
+
+<p>May the Almighty God grant us forgiveness of all our sins,<br/>
+and the grace and comfort of the Holy Spirit. <em>Amen.</em><br/>
+</p>
+
+<p class="rubric">The Officiant then says</p>
+
+
+<tabel>
+	<tr>
+		<td> Hello</td>
+		<td>O God, make speed to save us.</td>
+	</tr>
+	<tr>
+		<td>People</td>
+		<td>O Lord, make haste to help us.</td>
+	</tr>
+</tabel><br/>
+
+<p class="rubric">Officiant and People</p>
+
+<p>Glory to the Father, and to the Son, and to the Holy Spirit: as <br/>
+it was in the beginning, is now, and will be for ever. Amen. </p>
+
+<p><em class="smaller">Except in Lent, add</em> &nbsp;&nbsp; Alleluia.<br/>
+</p>
+
+<p class="rubric" id="psalm">One or more of the following Psalms are sung or said. Other suitable selections may be substituted.<br/>
+<br/></p>
+`
+
+  const renderers = {
+    hr: () => <View style={{ width: '100%', height: 1, backgroundColor: 'blue' }} />,
+    tabel: (children) => <View style={{ width: '100%', height: 1, backgroundColor: 'red' }}><Text>Yo</Text></View>,
+  }
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.container}>
-        <Italic>The Officiant begins</Italic>
-        <Spacer />
-
-        <BcpText>
-          The Lord Almighty grant us a peaceful night and a perfect end.{' '}
-          <Italic>Amen.</Italic>
-        </BcpText>
-        <Spacer />
-
-        <BcpText>
-          <Italic>Officiant {'  '}</Italic>
-          <BcpText>Our help is in the Name of the Lord;</BcpText>
-        </BcpText>
-
-        <BcpText>
-          <Italic>People {'     '}</Italic>
-          <BcpText>The maker of heaven and earth.</BcpText>
-        </BcpText>
-        <Spacer />
-
-        <Italic>The Officiant may then say</Italic>
-        <Spacer />
-
-        <BcpText>Let us confess our sins to God.</BcpText>
-        <Spacer />
-
-        <Italic>Silence may be kept.</Italic>
-        <Spacer />
-
-        <Italic>Officiant and People</Italic>
-        <Spacer />
-
-        <BcpText>Almighty God, our heavenly Father:</BcpText>
-        <BcpText>We have sinned against you,</BcpText>
-        <BcpText>through our own fault,</BcpText>
-        <BcpText>in thought, and word, and deed,</BcpText>
-        <BcpText>and in what we have left undone.</BcpText>
-        <BcpText>For the sake of your Son our Lord Jesus Christ,</BcpText>
-        <BcpText>forgive us all our offenses;</BcpText>
-        <BcpText>and grant that we may serve you</BcpText>
-        <BcpText>in newness of life,</BcpText>
-        <BcpText>to the glory of your Name. Amen.</BcpText>
-        <Spacer />
-
-        <Italic>Officiant</Italic>
-        <Spacer />
-
-        <BcpText>
-          May the Almighty God grant us forgiveness of all our sins and the
-          comfort of the Holy Spirit. <Italic>Amen.</Italic>
-        </BcpText>
-        <Spacer />
-
-        <Italic>The Officiant then says</Italic>
-        <Spacer />
-
-        {/* This is really sloppy spacing. Figure out how to do this better. */}
-        <BcpText>{'                '} O God, make speed to save us.</BcpText>
-        <BcpText>
-          <Italic>People</Italic> {'   '} O Lord, make haste to help us.
-        </BcpText>
-        <Spacer />
-
-        <Italic>Officiant and People</Italic>
-        <Spacer />
-
-        <BcpText>
-          Glory to the Father, and to the Son, and to the Holy Spirit: as it was
-          in the beginning, is now, and will be for ever. <Italic>Amen.</Italic>
-        </BcpText>
-        <Spacer />
-
-        <BcpText>
-          <Italic>Except in Lent, add </Italic> {'   '} Alleluia.
-        </BcpText>
-        <Spacer />
-
-        <Italic>
-          One or more of the following Psalms are sung or said. Other suitable
-          selections may be substituted.
-        </Italic>
+        <HTML
+          html={prePsalmContent}
+          classesStyles={{'rubric': {fontStyle: 'italic'}}}
+          renderers={renderers}
+        />
 
         <Button
           style={styles.button}
