@@ -18,16 +18,10 @@ const Compline = ({navigation, name}) => {
 <p>The Lord Almighty grant us a peaceful night and a perfect<br/>
 end. <em>Amen.</em></p>
 
-<table class="vrtable">
-	<tr>
-		<td class="vrpeople">Officiant</td>
-		<td>Our help is in the Name of the Lord;</td>
-	</tr>
-	<tr>
-		<td class="vrpeople">People</td>
-		<td>The maker of heaven and earth.</td>
-	</tr>
-</table>
+		<p><i>Officiant</i>
+		Our help is in the Name of the Lord;</p>
+		<p><i>People</i>
+		The maker of heaven and earth.</p>
 
 <p class="rubric">The Officiant may then say</p>
 
@@ -57,16 +51,10 @@ and the grace and comfort of the Holy Spirit. <em>Amen.</em><br/>
 <p class="rubric">The Officiant then says</p>
 
 
-<tabel>
-	<tr>
-		<td> Hello</td>
-		<td>O God, make speed to save us.</td>
-	</tr>
-	<tr>
-		<td>People</td>
-		<td>O Lord, make haste to help us.</td>
-	</tr>
-</tabel><br/>
+    <p>&emsp;&emsp;&emsp;&emsp;&emsp;
+    O God, make speed to save us.<br>
+		<i>People</i>
+    &emsp;&nbsp;&nbsp;&nbsp;O Lord, make haste to help us.</p>
 
 <p class="rubric">Officiant and People</p>
 
@@ -80,17 +68,12 @@ it was in the beginning, is now, and will be for ever. Amen. </p>
 <br/></p>
 `
 
-  const renderers = {
-    hr: () => <View style={{ width: '100%', height: 1, backgroundColor: 'blue' }} />,
-    tabel: (children) => <View style={{ width: '100%', height: 1, backgroundColor: 'red' }}><Text>Yo</Text></View>,
-  }
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.container}>
         <HTML
           html={prePsalmContent}
           classesStyles={{'rubric': {fontStyle: 'italic'}}}
-          renderers={renderers}
         />
 
         <Button
