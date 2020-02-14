@@ -8,11 +8,11 @@ import {Text, StyleSheet} from 'react-native';
 import Spacer from './Spacer';
 import SmallItalic from './SmallItalic';
 
-const People = ({children}) => {
+const Officiant = ({children}) => {
   return (
     <>
       <Text>
-        <SmallItalic>People {'    '}</SmallItalic>
+        <SmallItalic>Officiant {'  '}</SmallItalic>
         <Text>{children}</Text>
       </Text>
     </>
@@ -26,4 +26,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default People;
+export default Officiant;
