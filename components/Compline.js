@@ -328,6 +328,57 @@ const Compline = ({navigation, name}) => {
           <SmallItalic>In Easter Season, add {'    '}</SmallItalic>
           <BcpText>Alleluia, alleluia, alleluia.</BcpText>
         </BcpText>
+        <Spacer />
+
+        <BcpText>
+          Lord, you now have set your servant free *{'\n'}
+          {'  '} to go in peace as you have promised;
+        </BcpText>
+
+        <BcpText>
+          For these eyes of mine have seen the Savior, *{'\n'}
+          {'  '} whom you have prepared for all the world to see:
+        </BcpText>
+
+        <BcpText>
+          A Light to enlighten the nations, *{'\n'}
+          {'  '} and the glory of your people Israel.
+        </BcpText>
+
+        <BcpText>
+          Glory to the Father, and to the Son, and to the Holy Spirit: * {'\n'}
+          {'  '} as it was in the beginning, is now, and will be for ever. Amen.{' '}
+          {'\n'}
+        </BcpText>
+        <Spacer />
+
+        <SmallItalic>All repeat the Antiphon</SmallItalic>
+        <Spacer />
+
+        <BcpText>
+          Guide us waking, O Lord, and guard us sleeping; that awake we may
+          watch with Christ, and asleep we may rest in peace.
+        </BcpText>
+        <Spacer />
+
+        <BcpText>
+          <SmallItalic>In Easter Season, add {'    '}</SmallItalic>
+          <BcpText>Alleluia, alleluia, alleluia.</BcpText>
+        </BcpText>
+        <Spacer />
+
+        <Officiant>Let us bless the Lord.</Officiant>
+        <People>Thanks be to God.</People>
+        <Spacer />
+
+        <SmallItalic>The officiant concludes</SmallItalic>
+        <Spacer />
+
+        <BcpText>
+          The almighty and merciful Lord, Father, Son, and Holy Spirit, bless us
+          and keep us. <Italic>Amen.</Italic>
+        </BcpText>
+        <Spacer />
       </ScrollView>
     </SafeAreaView>
   );
