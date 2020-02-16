@@ -1,21 +1,24 @@
 /**
- * My profile
+ * Compline. A lovely service for the Evening.
  */
 
 import React from 'react';
 import {SafeAreaView, ScrollView, StyleSheet, Button} from 'react-native';
 
-import Italic from './shared/Italic';
-import SmallItalic from './shared/SmallItalic';
-import BcpText from './shared/BcpText';
-import Spacer from './shared/Spacer';
-import People from './shared/People';
-import Officiant from './shared/Officiant';
+import Italic from '../shared/Italic';
+import SmallItalic from '../shared/SmallItalic';
+import BcpText from '../shared/BcpText';
+import Spacer from '../shared/Spacer';
+import People from '../shared/People';
+import Officiant from '../shared/Officiant';
+import Title from '../shared/Title';
 
 const Compline = ({navigation, name}) => {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.container}>
+        <Title>An Order for Compline</Title>
+
         <SmallItalic>The Officiant begins</SmallItalic>
         <Spacer />
 
@@ -72,7 +75,7 @@ const Compline = ({navigation, name}) => {
         <SmallItalic>The Officiant then says</SmallItalic>
         <Spacer />
 
-        {/* This is really sloppy spacing. Figure out how to do this better. */}
+        {/* TODO This is really sloppy spacing. Figure out how to do this better. */}
         <BcpText>{'                '} O God, make speed to save us.</BcpText>
         <BcpText>
           <SmallItalic>People</SmallItalic> {'   '} O Lord, make haste to help

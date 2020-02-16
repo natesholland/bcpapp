@@ -1,11 +1,10 @@
 /**
- * When the people say something
+ * When the Officiant says something
  */
 
 import React from 'react';
 import {Text, StyleSheet} from 'react-native';
 
-import Spacer from './Spacer';
 import SmallItalic from './SmallItalic';
 
 const Officiant = ({children}) => {
