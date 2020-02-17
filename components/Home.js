@@ -4,6 +4,8 @@
 
 import React, {useState} from 'react';
 import {View, Text, StyleSheet, FlatList, Alert, Button} from 'react-native';
+import DailyReadings from './shared/DailyReadings';
+import BcpText from './shared/BcpText';
 
 const Home = ({navigation}) => {
   return (
@@ -18,6 +20,7 @@ const Home = ({navigation}) => {
         title="Let's do Evening Prayer"
         onPress={() => navigation.navigate('EveningPrayerRite2')}
       />
+      <DailyReadings />
     </View>
   );
 };
