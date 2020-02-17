@@ -2,57 +2,57 @@
  * Evening Prayer Rite Two
  */
 
-import React from 'react';
-import {SafeAreaView, ScrollView, StyleSheet} from 'react-native';
+import React, {useState} from 'react';
+import {SafeAreaView, ScrollView, StyleSheet, Button} from 'react-native';
 
 import Italic from '../shared/Italic';
-import Bold from '../shared/Bold';
 import SubTitle from '../shared/SubTitle';
 import Title from '../shared/Title';
 import SmallItalic from '../shared/SmallItalic';
 import BcpText from '../shared/BcpText';
 import Spacer from '../shared/Spacer';
-import People from '../shared/People';
-import LordsPrayer from '../shared/LordsPrayer';
-import Officiant from '../shared/Officiant';
 import SmallBcpText from '../shared/SmallBcpText';
+import Collapsible from 'react-native-collapsible';
 
 const DailyDevotion = ({navigation, name}) => {
+  const [collapsedInstructions, changeCollapsedInstructions] = useState(true);
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.container}>
-        <Title>Daily Devotions for Individials and Families</Title>
-        {/*
-          TODO I would love to figure out how to make these instructions
-          an expandable view.
-         */}
-        <SmallBcpText>
-          These devotions follow the basic structure of the Daily Office of the
-          Church.{'\n'}
-          {'\n'}
-          When more than one person is present, the Reading and the Collect
-          should be read by one person, and the other parts said in unison, or
-          in some other convenient manner. (For suggestions about reading the
-          Psalms, seen page 582.){'\n'} {/* TODO figure out how to link this */}
-          {'\n'}
-          For convenience, appropriate Psalms, Readings, and Collects are
-          provided in each service. When desired, however, the Collect of the
-          {'\n'}
-          Day, or any of the Collects appointed in the Daily Offices, may be
-          used instead.{'\n'}
-          {'\n'}
-          The Psalms and Readings may be replaced by those appointed in{'\n'}
-          {'\n'}
-          a) the Lectionary for Sundays, Holy Days, the Common of Saints, and
-          Various Occasions, page 888{'\n'}{' '}
-          {/* TODO figure out how to link this */}
-          {'\n'}
-          b) the Daily Office Lectionary, page 934{'\n'}{' '}
-          {/* TODO figure out how to link this */}
-          {'\n'}
-          c) some other manual of devotion which provides daily selections for
-          the Church Year.
-        </SmallBcpText>
+        <Button
+          title={collapsedInstructions ? 'Instructions' : 'Close Instructions'}
+          onPress={() => changeCollapsedInstructions(!collapsedInstructions)}
+        />
+        <Collapsible collapsed={collapsedInstructions}>
+          <SmallBcpText>
+            These devotions follow the basic structure of the Daily Office of
+            the Church.{'\n'}
+            {'\n'}
+            When more than one person is present, the Reading and the Collect
+            should be read by one person, and the other parts said in unison, or
+            in some other convenient manner. (For suggestions about reading the
+            Psalms, seen page 582.){'\n'}{' '}
+            {/* TODO figure out how to link this */}
+            {'\n'}
+            For convenience, appropriate Psalms, Readings, and Collects are
+            provided in each service. When desired, however, the Collect of the
+            {'\n'}
+            Day, or any of the Collects appointed in the Daily Offices, may be
+            used instead.{'\n'}
+            {'\n'}
+            The Psalms and Readings may be replaced by those appointed in{'\n'}
+            {'\n'}
+            a) the Lectionary for Sundays, Holy Days, the Common of Saints, and
+            Various Occasions, page 888{'\n'}{' '}
+            {/* TODO figure out how to link this */}
+            {'\n'}
+            b) the Daily Office Lectionary, page 934{'\n'}{' '}
+            {/* TODO figure out how to link this */}
+            {'\n'}
+            c) some other manual of devotion which provides daily selections for
+            the Church Year.
+          </SmallBcpText>
+        </Collapsible>
         <Spacer />
 
         <SubTitle>In the Morning</SubTitle>
