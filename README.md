@@ -1,4 +1,4 @@
-## Set Up
+## 💻 Local Development
 
 ```
 # To run iOs Simulator on Mac
