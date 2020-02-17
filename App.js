@@ -15,6 +15,7 @@ import Psalm4 from './components/psalms/Psalm4';
 import Psalm31 from './components/psalms/Psalm31';
 import Psalm91 from './components/psalms/Psalm91';
 import Psalm134 from './components/psalms/Psalm134';
+import DailyDevotion from './components/daily_office/DailyDevotion';
 
 const Stack = createStackNavigator();
 
@@ -32,6 +33,11 @@ const App = () => {
           name="EveningPrayerRite2"
           component={EveningPrayerRite2}
           options={{title: 'Evening Prayer Rite Two'}}
+        />
+        <Stack.Screen
+          name="DailyDevotion"
+          component={DailyDevotion}
+          options={{title: 'Daily Devotions'}}
         />
         <Stack.Screen name="Psalm 4" component={Psalm4} />
         <Stack.Screen name="Psalm 31" component={Psalm31} />
