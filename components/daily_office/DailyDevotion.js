@@ -19,6 +19,7 @@ const DailyDevotion = ({navigation, name}) => {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.container}>
+        <Title>Daily Devotions for Families and Individuals</Title>
         <Button
           title={collapsedInstructions ? 'Instructions' : 'Close Instructions'}
           onPress={() => changeCollapsedInstructions(!collapsedInstructions)}
