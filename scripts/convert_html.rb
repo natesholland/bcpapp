@@ -14,10 +14,13 @@ text.gsub!(/<hr>/, "")
 # convert tags
 text.gsub!(/<a name=".*">(.*)<\/a>/) { $1 }
 text.gsub!(/<p class="rubric"><em>(.*)<\/em><\/p>/) { "<SmallItalic>#{$1}</SmallItalic>" }
+text.gsub!(/<p class="rubric">(.*)<\/p>/) { "<SmallItalic>#{$1}</SmallItalic>" }
 text.gsub!(/<p class="rubric".*><em>(.*\n.*)<\/em><\/p>/) { "<SmallItalic>#{$1}</SmallItalic>" }
 text.gsub!(/<font size="2"><em>(.*)<\/em><\/font>/) { "<SmallItalic>#{$1}</SmallItalic>" }
 text.gsub!(/<em>(.*)<\/em>/) { "<Italic>#{$1}</Italic>" }
 text.gsub!(/<em class="small">(.*)<\/em>/) { "<SmallItalic>#{$1}</SmallItalic>" }
+text.gsub!(/<span style="font-size: small">(.*)<\/span>/) { "<SmallItalic>#{$1}</SmallItalic>" }
+text.gsub!(/<td class="vsnum" width="6%" valign="top">(.*)<\/td>/) { "<SmallBcpText>#{$1}</SmallBcpText>" }
 text.gsub!(/<strong>(.*)<\/strong>/) { "<Bold>#{$1}</Bold>" }
 text.gsub!(/<strong>/, "<Bold>")
 text.gsub!(/<\/strong>/, "</Bold>")
