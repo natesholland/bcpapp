@@ -10,6 +10,11 @@ const Home = ({navigation}) => {
     <View style={styles.container}>
       <Button
         style={styles.button}
+        title="Morning Prayer"
+        onPress={() => navigation.navigate('MorningPrayerRite2')}
+      />
+      <Button
+        style={styles.button}
         title="Noonday"
         onPress={() => navigation.navigate('Noonday')}
       />

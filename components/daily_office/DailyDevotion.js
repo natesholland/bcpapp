@@ -1,5 +1,5 @@
 /**
- * Evening Prayer Rite Two
+ * Daily Devotions
  */
 
 import React, {useState} from 'react';
