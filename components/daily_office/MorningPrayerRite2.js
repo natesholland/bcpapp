@@ -17,8 +17,12 @@ import Collapsible from 'react-native-collapsible';
 import Officiant from '../shared/Officiant';
 import People from '../shared/People';
 
+import Canticle8 from '../canticles/Canticle8';
+import Canticle9 from '../canticles/Canticle9';
+
 const MorningPrayerRite2 = ({navigation, name}) => {
-  const [collapsedInstructions, changeCollapsedInstructions] = useState(true);
+  const [collapsedCanticle8, changeCollapsedCanticle8] = useState(true);
+  const [collapsedCanticle9, changeCollapsedCanticle9] = useState(true);
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.container}>
@@ -698,85 +702,25 @@ const MorningPrayerRite2 = ({navigation, name}) => {
           the Gospel is read after the second Canticle.
         </SmallItalic>
         <Spacer />
+
+        <Button
+          title={'8 The Song of Moses'}
+          onPress={() => changeCollapsedCanticle8(!collapsedCanticle8)}
+        />
+        <Collapsible collapsed={collapsedCanticle8}>
+          <Canticle8 />
+        </Collapsible>
+        <Button
+          title={'9 The First Song of Isaiah'}
+          onPress={() => changeCollapsedCanticle9(!collapsedCanticle9)}
+        />
+        <Collapsible collapsed={collapsedCanticle9}>
+          <Canticle9 />
+        </Collapsible>
         {/* 
 
 
 
-
-
-
-{'\n'}
-{'\n'}
-
-
-{'\n'}
-{'\n'}
-
-<BcpText><strong class="x-large" id="canticles">8</Bold>{'    '}<Bold>The Song of Moses</Bold>{'    '}<Italic>Cantemus Domino</Italic> {'\n'}
-{'       '}{'  '}<SmallItalic>Exodus 15:1-6, 11-13, 17-18 </SmallItalic></BcpText>
-
-<SmallItalic>Especially suitable for use in Easter Season</em></SmallItalic>
-
-<BcpText>I will sing to the Lord, for he is lofty and uplifted; * {'\n'}
-{'    '}the horse and its rider has he hurled into the sea. {'\n'}
-The Lord is my strength and my refuge; * {'\n'}
-{'    '}the Lord has become my Savior. {'\n'}
-This is my God and I will praise him, * {'\n'}
-{'    '}the God of my people and I will exalt him. {'\n'}
-The Lord is a mighty warrior; * {'\n'}
-{'    '}Yahweh is his Name. {'\n'}
-The chariots of Pharaoh and his army has he hurled into the sea; * {'\n'}
-{'    '}the finest of those who bear armor have been {'\n'}
-{'       '}{'       '}{'       '}{'       '}{' '}drowned in the Red Sea. {'\n'}
-The fathomless deep has overwhelmed them; * {'\n'}
-{'    '}they sank into the depths like a stone. {'\n'}
-Your right hand, O Lord, is glorious in might; * {'\n'}
-{'    '}your right hand, O Lord, has overthrown the enemy. {'\n'}
-Who can be compared with you, O Lord, among the gods? * {'\n'}
-{'    '}who is like you, glorious in holiness, {'\n'}
-{'    '}awesome in renown, and worker of wonders? {'\n'}
-You stretched forth your right hand; * {'\n'}
-{'    '}the earth swallowed them up. {'\n'}
-With your constant love you led the people you redeemed; * {'\n'}
-{'    '}with your might you brought them in safety to {'\n'}
-{'       '}{'       '}{'       '}{'       '}{' '}your holy dwelling. {'\n'}
-You will bring them in and plant them * {'\n'}
-{'    '}on the mount of your possession, {'\n'}
-The resting-place you have made for yourself, O Lord, * {'\n'}
-{'    '}the sanctuary, O Lord, that your hand has established. {'\n'}
-The Lord shall reign * {'\n'}
-{'    '}for ever and for ever.</BcpText>
-
-<BcpText>Glory to the Father, and to the Son, and to the Holy Spirit: * {'\n'}
-{'    '}as it was in the beginning, is now, and will be for ever. Amen.</BcpText>
-
-{'\n'}
-{'\n'}
-
-
-{'\n'}
-{'\n'}
-
-<BcpText><strong class="x-large">9</Bold>{'    '}<Bold>The First Song of Isaiah</Bold>{'    '}<Italic>Ecce, Deus</Italic> {'\n'}
-{'       '}{'  '}<SmallItalic>Isaiah 12:2-6</SmallItalic></BcpText>
-
-<BcpText>Surely, it is God who saves me; *{'\n'}
-{'    '}I will trust in him and not be afraid. {'\n'}
-For the Lord is my stronghold and my sure defense, * {'\n'}
-{'    '}and he will be my Savior. {'\n'}
-Therefore you shall draw water with rejoicing * {'\n'}
-{'    '}from the springs of salvation. {'\n'}
-And on that day you shall say, * {'\n'}
-{'    '}Give thanks to the Lord and call upon his Name; {'\n'}
-Make his deeds known among the peoples; * {'\n'}
-{'    '}see that they remember that his Name is exalted. {'\n'}
-Sing the praises of the Lord, for he has done great things, * {'\n'}
-{'    '}and this is known in all the world. {'\n'}
-Cry aloud, inhabitants of Zion, ring out your joy, * {'\n'}
-{'    '}for the great one in the midst of you is the Holy One of Israel. </BcpText>
-
-<BcpText>Glory to the Father, and to the Son, and to the Holy Spirit: * {'\n'}
-{'    '}as it was in the beginning, is now, and will be for ever. Amen.</BcpText>
 
 <BcpText>{'\n'}
 <strong class="x-large">10</Bold>{'    '}<Bold>The Second Song of Isaiah</Bold>{'       '}{' '}<Italic>Quaerite Dominum</Italic> {'\n'}
