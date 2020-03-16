@@ -19,10 +19,35 @@ import People from '../shared/People';
 
 import Canticle8 from '../canticles/Canticle8';
 import Canticle9 from '../canticles/Canticle9';
+import Canticle10 from '../canticles/Canticle10';
+import Canticle11 from '../canticles/Canticle11';
+import Canticle12 from '../canticles/Canticle12';
+import Canticle13 from '../canticles/Canticle13';
+import Canticle14 from '../canticles/Canticle14';
+import Canticle15 from '../canticles/Canticle15';
+import Canticle16 from '../canticles/Canticle16';
+import Canticle17 from '../canticles/Canticle17';
+import Canticle18 from '../canticles/Canticle18';
+import Canticle19 from '../canticles/Canticle19';
+import Canticle20 from '../canticles/Canticle20';
+import Canticle21 from '../canticles/Canticle21';
 
 const MorningPrayerRite2 = ({navigation, name}) => {
   const [collapsedCanticle8, changeCollapsedCanticle8] = useState(true);
   const [collapsedCanticle9, changeCollapsedCanticle9] = useState(true);
+  const [collapsedCanticle10, changeCollapsedCanticle10] = useState(true);
+  const [collapsedCanticle11, changeCollapsedCanticle11] = useState(true);
+  const [collapsedCanticle12, changeCollapsedCanticle12] = useState(true);
+  const [collapsedCanticle13, changeCollapsedCanticle13] = useState(true);
+  const [collapsedCanticle14, changeCollapsedCanticle14] = useState(true);
+  const [collapsedCanticle15, changeCollapsedCanticle15] = useState(true);
+  const [collapsedCanticle16, changeCollapsedCanticle16] = useState(true);
+  const [collapsedCanticle17, changeCollapsedCanticle17] = useState(true);
+  const [collapsedCanticle18, changeCollapsedCanticle18] = useState(true);
+  const [collapsedCanticle19, changeCollapsedCanticle19] = useState(true);
+  const [collapsedCanticle20, changeCollapsedCanticle20] = useState(true);
+  const [collapsedCanticle21, changeCollapsedCanticle21] = useState(true);
+
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.container}>
@@ -717,268 +742,104 @@ const MorningPrayerRite2 = ({navigation, name}) => {
         <Collapsible collapsed={collapsedCanticle9}>
           <Canticle9 />
         </Collapsible>
+        <Button
+          title={'10 The Second Song of Isaiah'}
+          onPress={() => changeCollapsedCanticle10(!collapsedCanticle10)}
+        />
+        <Collapsible collapsed={collapsedCanticle10}>
+          <Canticle10 />
+        </Collapsible>
+        <Button
+          title={'11 The Third Song of Isaiah'}
+          onPress={() => changeCollapsedCanticle11(!collapsedCanticle11)}
+        />
+        <Collapsible collapsed={collapsedCanticle11}>
+          <Canticle11 />
+        </Collapsible>
+        <Button
+          title={'12 A Song of Creation'}
+          onPress={() => changeCollapsedCanticle12(!collapsedCanticle12)}
+        />
+        <Collapsible collapsed={collapsedCanticle12}>
+          <Canticle12 />
+        </Collapsible>
+        <Button
+          title={'13 A Song of Praise'}
+          onPress={() => changeCollapsedCanticle13(!collapsedCanticle13)}
+        />
+        <Collapsible collapsed={collapsedCanticle13}>
+          <Canticle13 />
+        </Collapsible>
+        <Button
+          title={'14 A Song of Penitence'}
+          onPress={() => changeCollapsedCanticle14(!collapsedCanticle14)}
+        />
+        <Collapsible collapsed={collapsedCanticle14}>
+          <Canticle14 />
+        </Collapsible>
+        <Button
+          title={'15 The Song of Mary'}
+          onPress={() => changeCollapsedCanticle15(!collapsedCanticle15)}
+        />
+        <Collapsible collapsed={collapsedCanticle15}>
+          <Canticle15 />
+        </Collapsible>
+        <Button
+          title={'16 The Song of Zechariah'}
+          onPress={() => changeCollapsedCanticle16(!collapsedCanticle16)}
+        />
+        <Collapsible collapsed={collapsedCanticle16}>
+          <Canticle16 />
+        </Collapsible>
+        <Button
+          title={'17'}
+          onPress={() => changeCollapsedCanticle17(!collapsedCanticle17)}
+        />
+        <Collapsible collapsed={collapsedCanticle17}>
+          <Canticle17 />
+        </Collapsible>
+        <Button
+          title={'18'}
+          onPress={() => changeCollapsedCanticle18(!collapsedCanticle18)}
+        />
+        <Collapsible collapsed={collapsedCanticle18}>
+          <Canticle18 />
+        </Collapsible>
+        <Button
+          title={'19'}
+          onPress={() => changeCollapsedCanticle19(!collapsedCanticle19)}
+        />
+        <Collapsible collapsed={collapsedCanticle19}>
+          <Canticle19 />
+        </Collapsible>
+        <Button
+          title={'20'}
+          onPress={() => changeCollapsedCanticle20(!collapsedCanticle20)}
+        />
+        <Collapsible collapsed={collapsedCanticle20}>
+          <Canticle20 />
+        </Collapsible>
+        <Button
+          title={'21'}
+          onPress={() => changeCollapsedCanticle21(!collapsedCanticle21)}
+        />
+        <Collapsible collapsed={collapsedCanticle21}>
+          <Canticle21 />
+        </Collapsible>
         {/* 
 
 
 
 
-<BcpText>{'\n'}
-<strong class="x-large">10</Bold>{'    '}<Bold>The Second Song of Isaiah</Bold>{'       '}{' '}<Italic>Quaerite Dominum</Italic> {'\n'}
-{'       '}{'   '}<SmallItalic>Isaiah 55:6-11</SmallItalic> </BcpText>
-
-<BcpText>Seek the Lord while he wills to be found; * {'\n'}
-{'    '}call upon him when he draws near. {'\n'}
-Let the wicked forsake their ways * {'\n'}
-{'    '}and the evil ones their thoughts; {'\n'}
-And let them turn to the Lord, and he will have compassion, * {'\n'}
-{'    '}and to our God, for he will richly pardon. {'\n'}
-For my thoughts are not your thoughts, * {'\n'}
-{'    '}nor your ways my ways, says the Lord. {'\n'}
-For as the heavens are higher than the earth, * {'\n'}
-{'    '}so are my ways higher than your ways, {'\n'}
-{'    '}and my thoughts than your thoughts. </BcpText>
-
-{'\n'}
-{'\n'}
 
 
-{'\n'}
-{'\n'}
-
-<BcpText>For as rain and snow fall from the heavens * {'\n'}
-{'    '}and return not again, but water the earth, {'\n'}
-Bringing forth life and giving growth, * {'\n'}
-{'    '}seed for sowing and bread for eating, {'\n'}
-So is my word that goes forth from my mouth; * {'\n'}
-{'    '}it will not return to me empty; {'\n'}
-But it will accomplish that which I have purposed, * {'\n'}
-{'    '}and prosper in that for which I sent it. </BcpText>
-
-<BcpText>Glory to the Father, and to the Son, and to the Holy Spirit: * {'\n'}
-{'    '}as it was in the beginning, is now, and will be for ever. Amen. </BcpText>
-
-<BcpText>{'\n'}
-<strong class="x-large">11</Bold>{'    '}<Bold>The Third Song of Isaiah</Bold>{'    '}<Italic>Surge, illuminare</Italic> {'\n'}
-{'       '}{'   '}<SmallItalic>Isaiah 60:1-3, 11a, 14c, 18-19</SmallItalic> </BcpText>
-
-<BcpText>Arise, shine, for your light has come, * {'\n'}
-{'    '}and the glory of the Lord has dawned upon you.{'\n'}
-For behold, darkness covers the land; * {'\n'}
-{'    '}deep gloom enshrouds the peoples. {'\n'}
-But over you the Lord will rise, * {'\n'}
-{'    '}and his glory will appear upon you. {'\n'}
-Nations will stream to your light, * {'\n'}
-{'    '}and kings to the brightness of your dawning. {'\n'}
-Your gates will always be open; * {'\n'}
-{'    '}by day or night they will never be shut. {'\n'}
-They will call you, The City of the Lord, * {'\n'}
-{'    '}The Zion of the Holy One of Israel. {'\n'}
-Violence will no more be heard in your land, * {'\n'}
-{'    '}ruin or destruction within your borders. {'\n'}
-You will call your walls, Salvation, * {'\n'}
-{'    '}and all your portals, Praise. {'\n'}
-The sun will no more be your light by day; * {'\n'}
-{'    '}by night you will not need the brightness of the moon.</BcpText>
-
-{'\n'}
-{'\n'}
 
 
-{'\n'}
-{'\n'}
-
-<BcpText>The Lord will be your everlasting light, * {'\n'}
-{'    '}and your God will be your glory. </BcpText>
-
-<BcpText>Glory to the Father, and to the Son, and to the Holy Spirit: * {'\n'}
-{'    '}as it was in the beginning, is now, and will be for ever. Amen. </BcpText>
-
-<BcpText>{'\n'}
-<strong class="x-large">12</Bold>{'    '}<Bold>A Song of Creation</Bold>{'    '}<Italic>Benedicite, omnia opera Domini</Italic> {'\n'}
-{'       '}{'   '}<SmallItalic>Song of the Three Young Men, 35-65 </SmallItalic></BcpText>
-
-<p class="rubric">One or more sections of this Canticle may be used. Whatever the {'\n'}
-selection, it begins with the Invocation and concludes with the Doxology.</em></BcpText>
-
-<BcpText><Italic>Invocation </Italic></BcpText>
-
-<BcpText>Glorify the Lord, all you works of the Lord, * {'\n'}
-{'    '}praise him and highly exalt him for ever. {'\n'}
-In the firmament of his power, glorify the Lord, * {'\n'}
-{'    '}praise him and highly exalt him for ever. </BcpText>
-
-<BcpText><Italic>I{'    '}The Cosmic Order</Italic> </BcpText>
-
-<BcpText>Glorify the Lord, you angels and all powers of the Lord, * {'\n'}
-{'    '}O heavens and all waters above the heavens. {'\n'}
-Sun and moon and stars of the sky, glorify the Lord, * {'\n'}
-{'    '}praise him and highly exalt him for ever. </BcpText>
-
-<BcpText>Glorify the Lord, every shower of rain and fall of dew, * {'\n'}
-{'    '}all winds and fire and heat. {'\n'}
-Winter and Summer, glorify the Lord, * {'\n'}
-{'    '}praise him and highly exalt him for ever. </BcpText>
-
-<BcpText>Glorify the Lord, O chill and cold, * {'\n'}
-drops of dew and flakes of snow. {'\n'}
-Frost and cold, ice and sleet, glorify the Lord, * {'\n'}
-{'    '}praise him and highly exalt him for ever. </BcpText>
-
-{'\n'}
-{'\n'}
 
 
-{'\n'}
-{'\n'}
-
-<BcpText>Glorify the Lord, O nights and days, * {'\n'}
-{'    '}O shining light and enfolding dark. {'\n'}
-Storm clouds and thunderbolts, glorify the Lord, * {'\n'}
-{'    '}praise him and highly exalt him for ever. </BcpText>
-
-<BcpText><Italic>II{'    '}The Earth and its Creatures</Italic></BcpText>
-
-<BcpText>Let the earth glorify the Lord, * {'\n'}
-{'    '}praise him and highly exalt him for ever. {'\n'}
-Glorify the Lord, O mountains and hills, {'\n'}
-and all that grows upon the earth, * {'\n'}
-{'    '}praise him and highly exalt him for ever.</BcpText>
-
-<BcpText>Glorify the Lord, O springs of water, seas, and streams, * {'\n'}
-{'    '}O whales and all that move in the waters. {'\n'}
-All birds of the air, glorify the Lord, * {'\n'}
-{'    '}praise him and highly exalt him for ever.</BcpText>
-
-<BcpText>Glorify the Lord, O beasts of the wild, * {'\n'}
-{'    '}and all you flocks and herds. {'\n'}
-O men and women everywhere, glorify the Lord, * {'\n'}
-{'    '}praise him and highly exalt him for ever. </BcpText>
-
-<BcpText><Italic>III{'    '}The People of God</Italic></BcpText>
-
-<BcpText>Let the people of God glorify the Lord, * {'\n'}
-{'    '}praise him and highly exalt him for ever. {'\n'}
-Glorify the Lord, O priests and servants of the Lord, * {'\n'}
-{'    '}praise him and highly exalt him for ever. </BcpText>
-
-<BcpText>Glorify the Lord, O spirits and souls of the righteous, * {'\n'}
-{'    '}praise him and highly exalt him for ever. {'\n'}
-You that are holy and humble of heart, glorify the Lord, * {'\n'}
-{'    '}praise him and highly exalt him for ever. </BcpText>
-
-{'\n'}
-{'\n'}
 
 
-{'\n'}
-{'\n'}
 
-<BcpText><Italic>Doxology</Italic></BcpText>
-
-<BcpText>Let us glorify the Lord: Father, Son, and Holy Spirit; * {'\n'}
-{'    '}praise him and highly exalt him for ever. {'\n'}
-In the firmament of his power, glorify the Lord, * {'\n'}
-{'    '}praise him and highly exalt him for ever. </BcpText>
-
-<BcpText>{'\n'}
-<strong class="x-large">13</Bold>{'    '}<Bold>A Song of Praise</Bold>{'    '}<Italic>Benedictus es, Domine</Italic> {'\n'}
-{'       '}{'   '}<SmallItalic>Song of the Three Young Men, 29-34</SmallItalic> </BcpText>
-
-<BcpText>Glory to you, Lord God of our fathers; * {'\n'}
-{'    '}you are worthy of praise; glory to you. {'\n'}
-Glory to you for the radiance of your holy Name; * {'\n'}
-{'    '}we will praise you and highly exalt you for ever.</BcpText>
-
-<BcpText>Glory to you in the splendor of your temple; * {'\n'}
-{'    '}on the throne of your majesty, glory to you. {'\n'}
-Glory to you, seated between the Cherubim; * {'\n'}
-{'    '}we will praise you and highly exalt you for ever.</BcpText>
-
-<BcpText>Glory to you, beholding the depths; * {'\n'}
-{'    '}in the high vault of heaven, glory to you. {'\n'}
-Glory to you, Father, Son, and Holy Spirit; * {'\n'}
-{'    '}we will praise you and highly exalt you for ever.{'\n'}
-</BcpText>
-
-<BcpText>{'\n'}
-<strong class="x-large">14</Bold>{'    '}<Bold>A Song of Penitence</Bold>{'    '}<Italic>Kyrie Pantokrator</Italic> {'\n'}
-{'       '}{'   '}<SmallItalic>Prayer of Manasseh 1-2, 4, 6-7, 11-15 </SmallItalic></BcpText>
-
-<SmallItalic>Especially suitable in Lent, and on other penitential occasions </em></SmallItalic>
-
-<BcpText>O Lord and Ruler of the hosts of heaven, * {'\n'}
-{'    '}God of Abraham, Isaac, and Jacob, {'\n'}
-{'    '}and of all their righteous offspring: {'\n'}
-You made the heavens and the earth, * {'\n'}
-{'    '}with all their vast array. </BcpText>
-
-{'\n'}
-{'\n'}
-
-
-{'\n'}
-{'\n'}
-
-<BcpText>All things quake with fear at your presence; * {'\n'}
-{'    '}they tremble because of your power. {'\n'}
-But your merciful promise is beyond all measure; * {'\n'}
-{'    '}it surpasses all that our minds can fathom. {'\n'}
-O Lord, you are full of compassion, * {'\n'}
-{'    '}long-suffering, and abounding in mercy. {'\n'}
-You hold back your hand; * {'\n'}
-{'    '}you do not punish as we deserve. {'\n'}
-In your great goodness, Lord, {'\n'}
-you have promised forgiveness to sinners, * {'\n'}
-{'    '}that they may repent of their sin and be saved. {'\n'}
-And now, O Lord, I bend the knee of my heart, * {'\n'}
-{'    '}and make my appeal, sure of your gracious goodness. {'\n'}
-I have sinned, O Lord, I have sinned, * {'\n'}
-{'    '}and I know my wickedness only too well. {'\n'}
-Therefore I make this prayer to you: * {'\n'}
-{'    '}Forgive me, Lord, forgive me. {'\n'}
-Do not let me perish in my sin, * {'\n'}
-{'    '}nor condemn me to the depths of the earth. {'\n'}
-For you, O Lord, are the God of those who repent, * {'\n'}
-{'    '}and in me you will show forth your goodness. {'\n'}
-Unworthy as I am, you will save me, {'\n'}
-in accordance with your great mercy, * {'\n'}
-{'    '}and I will praise you without ceasing all the days of my life. {'\n'}
-For all the powers of heaven sing your praises, * {'\n'}
-{'    '}and yours is the glory to ages of ages. Amen.</BcpText>
-
-<BcpText>{'\n'}
-<strong class="x-large">15</Bold>{'    '}<Bold>The Song of Mary</Bold>{'    '}<Italic>Magnificat</Italic> {'\n'}
-{'       '}{'   '}<SmallItalic>Luke 1:46-55 </SmallItalic></BcpText>
-
-<BcpText>My soul proclaims the greatness of the Lord, {'\n'}
-my spirit rejoices in God my Savior; * {'\n'}
-{'    '}for he has looked with favor on his lowly servant.</BcpText>
-
-{'\n'}
-{'\n'}
-
-
-{'\n'}
-{'\n'}
-
-<BcpText>From this day all generations will call me blessed: * {'\n'}
-{'    '}the Almighty has done great things for me, {'\n'}
-{'    '}and holy is his Name. {'\n'}
-He has mercy on those who fear him * {'\n'}
-{'    '}in every generation. {'\n'}
-He has shown the strength of his arm, * {'\n'}
-{'    '}he has scattered the proud in their conceit. {'\n'}
-He has cast down the mighty from their thrones, *{'\n'}
-{'    '}and has lifted up the lowly. {'\n'}
-He has filled the hungry with good things, * {'\n'}
-{'    '}and the rich he has sent away empty. {'\n'}
-He has come to the help of his servant Israel, * {'\n'}
-{'    '}for he has remembered his promise of mercy, {'\n'}
-The promise he made to our fathers, * {'\n'}
-{'    '}to Abraham and his children for ever. </BcpText>
-
-<BcpText>Glory to the Father, and to the Son, and to the Holy Spirit: * {'\n'}
-{'    '}as it was in the beginning, is now, and will be for ever. Amen. </BcpText>
 
 <BcpText>{'\n'}
 <strong class="x-large">16</Bold>{'    '}<Bold>The Song of Zechariah</Bold>{'    '}<Italic>Benedictus Dominus Deus</Italic>{'\n'}
