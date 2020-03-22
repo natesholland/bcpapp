@@ -8,49 +8,42 @@ import Bold from '../shared/Bold';
 import SmallBcpText from '../shared/SmallBcpText';
 import Spacer from '../shared/Spacer';
 
-const Canticle8 = ({navigator, name}) => {
+const Canticle19 = ({navigator, name}) => {
   return (
     <View>
       <BcpText>
-        <Bold>10</Bold>
+        {'\n'}
+        <Bold>19</Bold>
         {'    '}
-        <Bold>The Second Song of Isaiah</Bold>
-        {'       '} <Italic>Quaerite Dominum</Italic> {'\n'}
+        <Bold>The Song of the Redeemed</Bold>
+        {'    '}
+        <Italic>Magna et mirabilia</Italic> {'\n'}
         {'       '}
         {'   '}
-        <SmallItalic>Isaiah 55:6-11</SmallItalic>{' '}
+        <SmallItalic>Revelation 15:3-4 </SmallItalic>
       </BcpText>
 
       <BcpText>
-        Seek the Lord while he wills to be found; * {'\n'}
-        {'    '}call upon him when he draws near. {'\n'}
-        Let the wicked forsake their ways * {'\n'}
-        {'    '}and the evil ones their thoughts; {'\n'}
-        And let them turn to the Lord, and he will have compassion, * {'\n'}
-        {'    '}and to our God, for he will richly pardon. {'\n'}
-        For my thoughts are not your thoughts, * {'\n'}
-        {'    '}nor your ways my ways, says the Lord. {'\n'}
-        For as the heavens are higher than the earth, * {'\n'}
-        {'    '}so are my ways higher than your ways, {'\n'}
-        {'    '}and my thoughts than your thoughts.{' '}
+        O ruler of the universe, Lord God, {'\n'}
+        great deeds are they that you have done, * {'\n'}
+        {'    '}surpassing human understanding. {'\n'}
+        Your ways are ways of righteousness and truth, * {'\n'}O King of all the
+        ages.{' '}
       </BcpText>
+      <Spacer />
 
       <BcpText>
-        For as rain and snow fall from the heavens * {'\n'}
-        {'    '}and return not again, but water the earth, {'\n'}
-        Bringing forth life and giving growth, * {'\n'}
-        {'    '}seed for sowing and bread for eating, {'\n'}
-        So is my word that goes forth from my mouth; * {'\n'}
-        {'    '}it will not return to me empty; {'\n'}
-        But it will accomplish that which I have purposed, * {'\n'}
-        {'    '}and prosper in that for which I sent it.{' '}
+        Who can fail to do you homage, Lord, {'\n'}
+        and sing the praises of your Name? * {'\n'}
+        {'    '}for you only are the Holy One. {'\n'}
+        All nations will draw near and fall down before you, * {'\n'}
+        {'    '}because your just and holy works have been revealed.
       </BcpText>
-
       <Spacer />
 
       <BcpText>
         Glory to the Father, and to the Son, and to the Holy Spirit: as it was
-        in the beginning, is now, and will be for ever. Amen.
+        in the beginning, is now, and will be for ever. Amen.{' '}
       </BcpText>
     </View>
   );
@@ -63,4 +56,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Canticle8;
+export default Canticle19;

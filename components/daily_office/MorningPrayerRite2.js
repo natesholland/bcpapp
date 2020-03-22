@@ -16,6 +16,7 @@ import SmallBcpText from '../shared/SmallBcpText';
 import Collapsible from 'react-native-collapsible';
 import Officiant from '../shared/Officiant';
 import People from '../shared/People';
+import LordsPrayer from '../shared/LordsPrayer';
 
 import Canticle8 from '../canticles/Canticle8';
 import Canticle9 from '../canticles/Canticle9';
@@ -792,551 +793,380 @@ const MorningPrayerRite2 = ({navigation, name}) => {
           <Canticle16 />
         </Collapsible>
         <Button
-          title={'17'}
+          title={'17 The Song of Simeon'}
           onPress={() => changeCollapsedCanticle17(!collapsedCanticle17)}
         />
         <Collapsible collapsed={collapsedCanticle17}>
           <Canticle17 />
         </Collapsible>
         <Button
-          title={'18'}
+          title={'18 A Song to the Lamb'}
           onPress={() => changeCollapsedCanticle18(!collapsedCanticle18)}
         />
         <Collapsible collapsed={collapsedCanticle18}>
           <Canticle18 />
         </Collapsible>
         <Button
-          title={'19'}
+          title={'19 The Song of the Redeemed'}
           onPress={() => changeCollapsedCanticle19(!collapsedCanticle19)}
         />
         <Collapsible collapsed={collapsedCanticle19}>
           <Canticle19 />
         </Collapsible>
         <Button
-          title={'20'}
+          title={'20 Glory to God'}
           onPress={() => changeCollapsedCanticle20(!collapsedCanticle20)}
         />
         <Collapsible collapsed={collapsedCanticle20}>
           <Canticle20 />
         </Collapsible>
         <Button
-          title={'21'}
+          title={'21 You are God'}
           onPress={() => changeCollapsedCanticle21(!collapsedCanticle21)}
         />
         <Collapsible collapsed={collapsedCanticle21}>
           <Canticle21 />
         </Collapsible>
-        {/* 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<BcpText>{'\n'}
-<strong class="x-large">16</Bold>{'    '}<Bold>The Song of Zechariah</Bold>{'    '}<Italic>Benedictus Dominus Deus</Italic>{'\n'}
-{'       '}{'   '}<SmallItalic>Luke 1: 68-79 </SmallItalic></BcpText>
-
-<BcpText>Blessed be the Lord, the God of Israel; * {'\n'}
-{'    '}he has come to his people and set them free. {'\n'}
-He has raised up for us a mighty savior, * {'\n'}
-{'    '}born of the house of his servant David. {'\n'}
-Through his holy prophets he promised of old, {'\n'}
-that he would save us from our enemies, * {'\n'}
-{'    '}from the hands of all who hate us. {'\n'}
-He promised to show mercy to our fathers * {'\n'}
-{'    '}and to remember his holy covenant. {'\n'}
-This was the oath he swore to our father Abraham, * {'\n'}
-{'    '}to set us free from the hands of our enemies, {'\n'}
-Free to worship him without fear, * {'\n'}
-{'    '}holy and righteous in his sight {'\n'}
-{'    '}all the days of our life. </BcpText>
-
-{'\n'}
-{'\n'}
-
-
-{'\n'}
-{'\n'}
-
-<BcpText>You, my child, shall be called the prophet of the Most High, * {'\n'}
-{'    '}for you will go before the Lord to prepare his way, {'\n'}
-To give his people knowledge of salvation * {'\n'}
-{'    '}by the forgiveness of their sins. {'\n'}
-In the tender compassion of our God * {'\n'}
-{'    '}the dawn from on high shall break upon us, {'\n'}
-To shine on those who dwell in darkness and the {'\n'}
-{'       '}{'       '}{'       '}{'       '}{' '}shadow of death, * {'\n'}
-{'    '}and to guide our feet into the way of peace. </BcpText>
-
-<BcpText>Glory to the Father, and to the Son, and to the Holy Spirit: * {'\n'}
-{'    '}as it was in the beginning, is now, and will be for ever. Amen. </BcpText>
-
-<BcpText>{'\n'}
-<strong class="x-large">17</Bold>{'    '}<Bold>The Song of Simeon</Bold>{'    '}<Italic>Nunc Dimittis</Italic>{'\n'}
-{'       '}{'   '}<SmallItalic>Luke 2:29-32 </SmallItalic></BcpText>
-
-<BcpText>Lord, you now have set your servant free * {'\n'}
-{'    '}to go in peace as you have promised; {'\n'}
-For these eyes of mine have seen the Savior, * {'\n'}
-{'    '}whom you have prepared for all the world to see: {'\n'}
-A Light to enlighten the nations, * {'\n'}
-{'    '}and the glory of your people Israel. </BcpText>
-
-<BcpText>Glory to the Father, and to the Son, and to the Holy Spirit: * {'\n'}
-{'    '}as it was in the beginning, is now, and will be for ever. Amen. </BcpText>
-
-<BcpText>{'\n'}
-<strong class="x-large">18</Bold>{'    '}<Bold>A Song to the Lamb</Bold>{'    '}<Italic>Dignus es</Italic> {'\n'}
-{'       '}{'   '}<SmallItalic>Revelation 4:11, 5:9-10, 13</SmallItalic></BcpText>
-
-<BcpText>Splendor and honor and kingly power * {'\n'}
-{'    '}are yours by right, O Lord our God, {'\n'}
-For you created everything that is, * {'\n'}
-{'    '}and by your will they were created and have their being; </BcpText>
-
-{'\n'}
-{'\n'}
-
-
-{'\n'}
-{'\n'}
-
-<BcpText>And yours by right, O Lamb that was slain, * {'\n'}
-{'    '}for with your blood you have redeemed for God, {'\n'}
-From every family, language, people, and nation, * {'\n'}
-{'    '}a kingdom of priests to serve our God. </BcpText>
-
-<BcpText>And so, to him who sits upon the throne, * {'\n'}
-{'    '}and to Christ the Lamb, {'\n'}
-Be worship and praise, dominion and splendor, * {'\n'}
-{'    '}for ever and for evermore. </BcpText>
-
-<BcpText>{'\n'}
-<strong class="x-large">19</Bold>{'    '}<Bold>The Song of the Redeemed</Bold>{'    '}<Italic>Magna et mirabilia</Italic> {'\n'}
-{'       '}{'   '}<SmallItalic>Revelation 15:3-4 </SmallItalic></BcpText>
-
-<BcpText>O ruler of the universe, Lord God, {'\n'}
-great deeds are they that you have done, * {'\n'}
-{'    '}surpassing human understanding. {'\n'}
-Your ways are ways of righteousness and truth, * {'\n'}
-O King of all the ages. </BcpText>
-
-<BcpText>Who can fail to do you homage, Lord, {'\n'}
-and sing the praises of your Name? * {'\n'}
-{'    '}for you only are the Holy One. {'\n'}
-All nations will draw near and fall down before you, * {'\n'}
-{'    '}because your just and holy works have been revealed.</BcpText>
-
-<BcpText>Glory to the Father, and to the Son, and to the Holy Spirit: * {'\n'}
-{'    '}as it was in the beginning, is now, and will be for ever. Amen. </BcpText>
-
-<BcpText>{'\n'}
-<strong class="x-large">20</Bold>{'    '}<Bold>Glory to God</Bold>{'    '}<Italic>Gloria in excelsis</Italic> </BcpText>
-
-<BcpText>Glory to God in the highest, {'\n'}
-{'    '}and peace to his people on earth. </BcpText>
-
-<BcpText>Lord God, heavenly King, {'\n'}
-almighty God and Father, </BcpText>
-
-{'\n'}
-{'\n'}
-
-
-{'\n'}
-{'\n'}
-
-<BcpText>{'    '}we worship you, we give you thanks, {'\n'}
-{'    '}we praise you for your glory. </BcpText>
-
-<BcpText>Lord Jesus Christ, only Son of the Father, {'\n'}
-Lord God, Lamb of God, {'\n'}
-you take away the sin of the world: {'\n'}
-{'    '}have mercy on us; {'\n'}
-you are seated at the right hand of the Father: {'\n'}
-{'    '}receive our prayer. </BcpText>
-
-<BcpText>For you alone are the Holy One, {'\n'}
-you alone are the Lord, {'\n'}
-you alone are the Most High,{'\n'}
-{'    '}Jesus Christ, {'\n'}
-{'    '}with the Holy Spirit, {'\n'}
-{'    '}in the glory of God the Father. Amen.</BcpText>
-
-<BcpText>{'\n'}
-<strong class="x-large">21</Bold>{'    '}<Bold>You are God</Bold>{'   '}<Italic>Te Deum laudamus</Italic> </BcpText>
-
-<BcpText>You are God: we praise you; {'\n'}
-You are the Lord; we acclaim you; {'\n'}
-You are the eternal Father: {'\n'}
-All creation worships you. {'\n'}
-To you all angels, all the powers of heaven, {'\n'}
-Cherubim and Seraphim, sing in endless praise: {'\n'}
-{'    '}Holy, holy, holy Lord, God of power and might,{'\n'}
-{'    '}heaven and earth are full of your glory. {'\n'}
-The glorious company of apostles praise you. {'\n'}
-The noble fellowship of prophets praise you. {'\n'}
-The white-robed army of martyrs praise you. {'\n'}
-Throughout the world the holy Church acclaims you; {'\n'}
-{'    '}Father, of majesty unbounded, {'\n'}
-{'    '}your true and only Son, worthy of all worship,{'\n'}
-{'    '}and the Holy Spirit, advocate and guide. </BcpText>
-
-{'\n'}
-{'\n'}
-
-
-{'\n'}
-{'\n'}
-
-<BcpText>You, Christ, are the king of glory, {'\n'}
-the eternal Son of the Father. {'\n'}
-When you became man to set us free {'\n'}
-you did not shun the Virgin's womb. {'\n'}
-You overcame the sting of death {'\n'}
-and opened the kingdom of heaven to all believers. {'\n'}
-You are seated at God's right hand in glory. {'\n'}
-We believe that you will come and be our judge. {'\n'}
-{'    '}Come then, Lord, and help your people, {'\n'}
-{'    '}bought with the price of your own blood, {'\n'}
-{'    '}and bring us with your saints {'\n'}
-{'    '}to glory everlasting. </BcpText>
-
-<BcpText>{'\n'}
-<a name=acreed><Bold>The Apostles' Creed</Bold></a></BcpText>
-
-<SmallItalic>Officiant and People together, all standing</SmallItalic>
-
-<BcpText>I believe in God, the Father almighty, {'\n'}
-{'    '}creator of heaven and earth; {'\n'}
-I believe in Jesus Christ, his only Son, our Lord. {'\n'}
-{'    '}He was conceived by the power of the Holy Spirit {'\n'}
-{'       '}{' '}and born of the Virgin Mary. {'\n'}
-{'    '}He suffered under Pontius Pilate, {'\n'}
-{'       '}{' '}was crucified, died, and was buried. {'\n'}
-{'    '}He descended to the dead. {'\n'}
-{'    '}On the third day he rose again. {'\n'}
-{'    '}He ascended into heaven, {'\n'}
-{'       '}{' '}and is seated at the right hand of the Father. {'\n'}
-{'    '}He will come again to judge the living and the dead. {'\n'}
-I believe in the Holy Spirit, {'\n'}
-{'    '}the holy catholic Church, {'\n'}
-{'    '}the communion of saints, {'\n'}
-{'    '}the forgiveness of sins{'\n'}
-{'    '}the resurrection of the body, {'\n'}
-{'    '}and the life everlasting. Amen. </BcpText>
-
-{'\n'}
-{'\n'}
-
-
-{'\n'}
-{'\n'}
-
-<h2 id="prayers">The Prayers</h2>
-
-<SmallItalic>{'\n'}The People stand or kneel </em></SmallItalic>
-
-<BcpText><table class="vrtable">
-	<tr>
-		<td class="vrpeople">Officiant</em></td>
-		<td>The Lord be with you.</td>
-	</tr>
-	<tr>
-		<td class="vrpeople">People</em></td>
-		<td>And also with you.</td>
-	</tr>
-	<tr>
-		<td class="vrpeople">Officiant</em></td>
-		<td>Let us pray.</td>
-	</tr>
-</table></BcpText>
-
-<SmallItalic>Officiant and People</SmallItalic>
-
-<table class="vrtable">
-    <tr>
-        <td>Our Father, who art in
-        heaven,{'\n'}
-       {'     '}hallowed be thy Name, {'\n'}
-       {'     '}thy kingdom come, {'\n'}
-       {'     '}thy will be done, {'\n'}
-       {'       '}{'  '}on earth as it is
-        in heaven. {'\n'}
-        Give us this day our daily bread. {'\n'}
-        And forgive us our trespasses, {'\n'}
-       {'     '}as we forgive those {'\n'}
-       {'       '}{'  '}who trespass
-        against us. {'\n'}
-        And lead us not into temptation, {'\n'}
-       {'     '}but deliver us from evil. {'\n'}
-        For thine is the kingdom, {'\n'}
-       {'     '}and the power, and the glory, {'\n'}
-       {'     '}for ever and ever. Amen.</td>
-        <td>Our Father in heaven, {'\n'}
-       {'     '}hallowed be your Name, {'\n'}
-       {'     '}your kingdom come, {'\n'}
-       {'     '}your will be done, {'\n'}
-       {'       '}{'  '}on earth as in
-        heaven. {'\n'}
-        Give us today our daily bread. {'\n'}
-        Forgive us our sins {'\n'}
-       {'     '}as we forgive those {'\n'}
-       {'       '}{'  '}who sin against us.
-        {'\n'}
-        Save us from the time of trial, {'\n'}
-       {'     '}and deliver us from evil. {'\n'}
-        For the kingdom, the power, {'\n'}
-       {'     '}and the glory are yours, {'\n'}
-       {'     '}now and for ever. Amen.</td>
-    </tr>
-</table>
-
-<SmallItalic>Then follows one of these sets of Suffrages</SmallItalic>
-
-<BcpText>{'       '}{' '}<Bold>A</Bold> </BcpText>
-
-<BcpText>
-V.{'    '}Show us your mercy, O Lord; {'\n'}
-R.{'    '}And grant us your salvation. {'\n'}
-V.{'    '}Clothe your ministers with righteousness; {'\n'}
-R.{'    '}Let your people sing with joy. {'\n'}
-V.{'    '}Give peace, O Lord, in all the world; {'\n'}
-R.{'    '}For only in you can we live in safety.</BcpText>
-
-{'\n'}
-{'\n'}
-
-
-{'\n'}
-{'\n'}
-
-<BcpText>
-V.{'    '}Lord, keep this nation under your care; {'\n'}
-R.{'    '}And guide us in the way of justice and truth. {'\n'}
-V.{'    '}Let your way be known upon earth; {'\n'}
-R.{'    '}Your saving health among all nations. {'\n'}
-V.{'    '}Let not the needy, O Lord, be forgotten; {'\n'}
-R.{'    '}Nor the hope of the poor be taken away. {'\n'}
-V.{'    '}Create in us clean hearts, O God; {'\n'}
-R.{'    '}And sustain us with your Holy Spirit. </BcpText>
-
-<BcpText>{'       '}{' '}<Bold>B </Bold></BcpText>
-
-<BcpText>
-V.{'    '}Save your people, Lord, and bless your inheritance; {'\n'}
-R.{'    '}Govern and uphold them, now and always.{'\n'}
-V.{'    '}Day by day we bless you; {'\n'}
-R.{'    '}We praise your name for ever. {'\n'}
-V.{'    '}Lord, keep us from all sin today; {'\n'}
-R.{'    '}Have mercy upon us, Lord, have mercy. {'\n'}
-V.{'    '}Lord, show us your love and mercy; {'\n'}
-R.{'    '}For we put our trust in you. {'\n'}
-V.{'    '}In you, Lord, is our hope; {'\n'}
-R.{'    '}And we shall never hope in vain. </BcpText>
-
-<p class="rubric" id="collects">The Officiant then says one or more of the following Collects</BcpText>
-
-<BcpText><Italic>The Collect of the Day </Italic></BcpText>
-
-<BcpText>{'\n'}
-<Italic>A Collect for Sundays </Italic></BcpText>
-
-<BcpText>O God, you make us glad with the weekly remembrance of {'\n'}
-the glorious resurrection of your Son our Lord: Give us this {'\n'}
-day such blessing through our worship of you, that the week {'\n'}
-to come may be spent in your favor; through Jesus Christ our {'\n'}
-Lord. <Italic>Amen.</Italic> </BcpText>
-
-{'\n'}
-{'\n'}
-
-
-{'\n'}
-{'\n'}
-
-<BcpText><Italic>A Collect for Fridays </Italic></BcpText>
-
-<BcpText>Almighty God, whose most dear Son went not up to joy but {'\n'}
-first he suffered pain, and entered not into glory before he {'\n'}
-was crucified: Mercifully grant that we, walking in the way {'\n'}
-of the cross, may find it none other than the way of life and {'\n'}
-peace; through Jesus Christ our Lord. <Italic>Amen.</Italic></BcpText>
-
-<BcpText>{'\n'}
-<Italic>A Collect for Saturdays </Italic></BcpText>
-
-<BcpText>Almighty God, who after the creation of the world rested {'\n'}
-from all your works and sanctified a day of rest for all your {'\n'}
-creatures: Grant that we, putting away all earthly anxieties, {'\n'}
-may be duly prepared for the service of your sanctuary, and {'\n'}
-that our rest here upon earth may be a preparation for the {'\n'}
-eternal rest promised to your people in heaven; through Jesus {'\n'}
-Christ our Lord. <Italic>Amen.</Italic> </BcpText>
-
-<BcpText>{'\n'}
-<Italic>A Collect for the Renewal of Life </Italic></BcpText>
-
-<BcpText>O God, the King eternal, whose light divides the day from the {'\n'}
-night and turns the shadow of death into the morning: Drive {'\n'}
-far from us all wrong desires, incline our hearts to keep your {'\n'}
-law, and guide our feet into the way of peace; that, having {'\n'}
-done your will with cheerfulness during the day, we may, {'\n'}
-when night comes, rejoice to give you thanks; through Jesus {'\n'}
-Christ our Lord. <Italic>Amen.</Italic> </BcpText>
-
-<BcpText>{'\n'}
-<Italic>A Collect for Peace </Italic></BcpText>
-
-<BcpText>O God, the author of peace and lover of concord, to know {'\n'}
-you is eternal life and to serve you is perfect freedom: Defend {'\n'}
-us, your humble servants, in all assaults of our enemies; that {'\n'}
-we, surely trusting in your defense, may not fear the power of {'\n'}
-any adversaries; through the might of Jesus Christ our Lord. {'\n'}
-<Italic>Amen.</Italic></BcpText>
-
-{'\n'}
-{'\n'}
-
-
-{'\n'}
-{'\n'}
-
-<BcpText><Italic>A Collect for Grace </Italic></BcpText>
-
-<BcpText>Lord God, almighty and everlasting Father, you have {'\n'}
-brought us in safety to this new day: Preserve us with your {'\n'}
-mighty power, that we may not fall into sin, nor be overcome {'\n'}
-by adversity; and in all we do, direct us to the fulfilling of {'\n'}
-your purpose; through Jesus Christ our Lord. <Italic>Amen. </Italic></BcpText>
-
-<BcpText>{'\n'}
-<Italic>A Collect for Guidance </Italic></BcpText>
-
-<BcpText>Heavenly Father, in you we live and move and have our {'\n'}
-being: We humbly pray you so to guide and govern us by {'\n'}
-your Holy Spirit, that in all the cares and occupations of our {'\n'}
-life we may not forget you, but may remember that we are {'\n'}
-ever walking in your sight; through Jesus Christ our Lord. {'\n'}
-<Italic>Amen.</Italic></BcpText>
-
-<p class="rubric">{'\n'}Then, unless the Eucharist or a form of general intercession is to follow, {'\n'}
-one of these prayers for mission is added</BcpText>
-
-<BcpText>Almighty and everlasting God, by whose Spirit the whole {'\n'}
-body of your faithful people is governed and sanctified: {'\n'}
-Receive our supplications and prayers which we offer before {'\n'}
-you for all members of your holy Church, that in their {'\n'}
-vocation and ministry they may truly and devoutly serve you; {'\n'}
-through our Lord and Savior Jesus Christ. <Italic>Amen.</Italic></BcpText>
-
-<SmallItalic>or this</SmallItalic>
-
-<BcpText>O God, you have made of one blood all the peoples of the {'\n'}
-earth, and sent your blessed Son to preach peace to those {'\n'}
-who are far off and to those who are near: Grant that people {'\n'}
-everywhere may seek after you and find you; bring the {'\n'}
-nations into your fold; pour out your Spirit upon all flesh; {'\n'}
-and hasten the coming of your kingdom; through Jesus {'\n'}
-Christ our Lord. <Italic>Amen</Italic>. </BcpText>
-
-<SmallItalic>or the following</SmallItalic>
-
-{'\n'}
-{'\n'}
-
-
-{'\n'}
-{'\n'}
-
-<BcpText>Lord Jesus Christ, you stretched out your arms of love on {'\n'}
-the hard wood of the cross that everyone might come within {'\n'}
-the reach of your saving embrace: So clothe us in your Spirit {'\n'}
-that we, reaching forth our hands in love, may bring those {'\n'}
-who do not know you to the knowledge and love of you; for {'\n'}
-the honor of your Name. <Italic>Amen.</Italic> </BcpText>
-
-<SmallItalic>Here may be sung a hymn or anthem.</SmallItalic>
-
-<SmallItalic>Authorized intercessions and thanksgivings may follow.</SmallItalic>
-
-<SmallItalic>{'\n'}Before the close of the Office one or both of the following may be used</SmallItalic>
-
-<BcpText><em id="thanksgiving">The General Thanksgiving</em></BcpText>
-
-<SmallItalic>Officiant and People</SmallItalic>
-
-<BcpText>Almighty God, Father of all mercies, {'\n'}
-we your unworthy servants give you humble thanks {'\n'}
-for all your goodness and loving-kindness {'\n'}
-to us and to all whom you have made. {'\n'}
-We bless you for our creation, preservation, {'\n'}
-and all the blessings of this life; {'\n'}
-but above all for your immeasurable love {'\n'}
-in the redemption of the world by our Lord Jesus Christ; {'\n'}
-for the means of grace, and for the hope of glory. {'\n'}
-And, we pray, give us such an awareness of your mercies, {'\n'}
-that with truly thankful hearts we may show forth your praise, {'\n'}
-not only with our lips, but in our lives, {'\n'}
-by giving up our selves to your service, {'\n'}
-and by walking before you {'\n'}
-in holiness and righteousness all our days; {'\n'}
-through Jesus Christ our Lord, {'\n'}
-to whom, with you and the Holy Spirit, {'\n'}
-be honor and glory throughout all ages. Amen.</BcpText>
-
-{'\n'}
-{'\n'}
-
-
-{'\n'}
-{'\n'}
-
-<BcpText><Italic>A Prayer of St. Chrysostom </Italic></BcpText>
-
-<BcpText>Almighty God, you have given us grace at this time with one {'\n'}
-accord to make our common supplication to you; and you {'\n'}
-have promised through your well-beloved Son that when two {'\n'}
-or three are gathered together in his Name you will be in the {'\n'}
-midst of them: Fulfill now, O Lord, our desires and petitions {'\n'}
-as may be best for us; granting us in this world knowledge of {'\n'}
-your truth, and in the age to come life everlasting. <Italic>Amen.</Italic></BcpText>
-
-<SmallItalic>{'\n'}Then may be said</SmallItalic>
-
-<BcpText>Let us bless the Lord. {'\n'}
-<Italic>Thanks be to God.</Italic> </BcpText>
-
-<p class="rubric">From Easter Day through the Day of Pentecost "Alleluia, alleluia" may {'\n'}
-be added to the preceding versicle and response. </em></BcpText>
-
-<SmallItalic>{'\n'}The Officiant may then conclude with one of the following</em></SmallItalic>
-
-<BcpText>The grace of our Lord Jesus Christ, and the love of God, and {'\n'}
-the fellowship of the Holy Spirit, be with us all evermore. {'\n'}
-<Italic>Amen.</em>{'    '}<em class="small">2 Corinthians 13:14 </Italic></BcpText>
-
-<BcpText>May the God of hope fill us with all joy and peace in {'\n'}
-believing through the power of the Holy Spirit. <Italic>Amen.</Italic> {'\n'}
-<SmallItalic>Romans 15:13 </SmallItalic></BcpText>
-
-<BcpText>Glory to God whose power, working in us, can do infinitely {'\n'}
-more than we can ask or imagine: Glory to him from {'\n'}
-generation to generation in the Church, and in Christ Jesus {'\n'}
-for ever and ever. <Italic>Amen.</em>{'    '}<em class="small">Ephesians 3:20,21</Italic> </BcpText>
-
-        
-        
-        */}
+        <Spacer />
+        <Bold>The Apostles' Creed</Bold>
+        <Spacer />
+        <SmallItalic>Officiant and People together, all standing</SmallItalic>
+        <Spacer />
+
+        <BcpText>
+          I believe in God, the Father almighty, {'\n'}
+          {'    '}creator of heaven and earth; {'\n'}I believe in Jesus Christ,
+          his only Son, our Lord. {'\n'}
+          {'    '}He was conceived by the power of the Holy Spirit {'\n'}
+          {'       '} and born of the Virgin Mary. {'\n'}
+          {'    '}He suffered under Pontius Pilate, {'\n'}
+          {'       '} was crucified, died, and was buried. {'\n'}
+          {'    '}He descended to the dead. {'\n'}
+          {'    '}On the third day he rose again. {'\n'}
+          {'    '}He ascended into heaven, {'\n'}
+          {'       '} and is seated at the right hand of the Father. {'\n'}
+          {'    '}He will come again to judge the living and the dead. {'\n'}I
+          believe in the Holy Spirit, {'\n'}
+          {'    '}the holy catholic Church, {'\n'}
+          {'    '}the communion of saints, {'\n'}
+          {'    '}the forgiveness of sins{'\n'}
+          {'    '}the resurrection of the body, {'\n'}
+          {'    '}and the life everlasting. Amen.{' '}
+        </BcpText>
+        <Spacer />
+
+        <SubTitle>The Prayers</SubTitle>
+        <Spacer />
+
+        <SmallItalic>The People stand or kneel</SmallItalic>
+        <Spacer />
+
+        <Officiant>The Lord be with you.</Officiant>
+        <People>And also with you.</People>
+        <Officiant>Let us pray.</Officiant>
+
+        <SmallItalic>Officiant and People</SmallItalic>
+        <Spacer />
+
+        <LordsPrayer />
+        <Spacer />
+
+        <SmallItalic>Then follows one of these sets of Suffrages</SmallItalic>
+
+        <BcpText>
+          {'       '} <Bold>A</Bold>{' '}
+        </BcpText>
+        <Spacer />
+
+        <BcpText>
+          V.{'    '}Show us your mercy, O Lord; {'\n'}
+          R.{'    '}And grant us your salvation. {'\n'}
+          V.{'    '}Clothe your ministers with righteousness; {'\n'}
+          R.{'    '}Let your people sing with joy. {'\n'}
+          V.{'    '}Give peace, O Lord, in all the world; {'\n'}
+          R.{'    '}For only in you can we live in safety. {'\n'}
+          V.{'    '}Lord, keep this nation under your care; {'\n'}
+          R.{'    '}And guide us in the way of justice and truth. {'\n'}
+          V.{'    '}Let your way be known upon earth; {'\n'}
+          R.{'    '}Your saving health among all nations. {'\n'}
+          V.{'    '}Let not the needy, O Lord, be forgotten; {'\n'}
+          R.{'    '}Nor the hope of the poor be taken away. {'\n'}
+          V.{'    '}Create in us clean hearts, O God; {'\n'}
+          R.{'    '}And sustain us with your Holy Spirit.{' '}
+        </BcpText>
+        <Spacer />
+
+        <BcpText>
+          {'       '} <Bold>B </Bold>
+        </BcpText>
+        <Spacer />
+
+        <BcpText>
+          V.{'    '}Save your people, Lord, and bless your inheritance; {'\n'}
+          R.{'    '}Govern and uphold them, now and always.{'\n'}
+          V.{'    '}Day by day we bless you; {'\n'}
+          R.{'    '}We praise your name for ever. {'\n'}
+          V.{'    '}Lord, keep us from all sin today; {'\n'}
+          R.{'    '}Have mercy upon us, Lord, have mercy. {'\n'}
+          V.{'    '}Lord, show us your love and mercy; {'\n'}
+          R.{'    '}For we put our trust in you. {'\n'}
+          V.{'    '}In you, Lord, is our hope; {'\n'}
+          R.{'    '}And we shall never hope in vain.{' '}
+        </BcpText>
+        <Spacer />
+
+        <SmallItalic>
+          The Officiant then says one or more of the following Collects
+        </SmallItalic>
+        <Spacer />
+
+        <Italic>The Collect of the Day </Italic>
+        <Spacer />
+
+        <Italic>A Collect for Sundays </Italic>
+        <Spacer />
+
+        <BcpText>
+          O God, you make us glad with the weekly remembrance of the glorious
+          resurrection of your Son our Lord: Give us this day such blessing
+          through our worship of you, that the week to come may be spent in your
+          favor; through Jesus Christ our Lord. <Italic>Amen.</Italic>{' '}
+        </BcpText>
+        <Spacer />
+
+        <BcpText>
+          <Italic>A Collect for Fridays </Italic>
+        </BcpText>
+        <Spacer />
+
+        <BcpText>
+          Almighty God, whose most dear Son went not up to joy but first he
+          suffered pain, and entered not into glory before he was crucified:
+          Mercifully grant that we, walking in the way of the cross, may find it
+          none other than the way of life and peace; through Jesus Christ our
+          Lord. <Italic>Amen.</Italic>
+        </BcpText>
+        <Spacer />
+
+        <BcpText>
+          {'\n'}
+          <Italic>A Collect for Saturdays </Italic>
+        </BcpText>
+        <Spacer />
+
+        <BcpText>
+          Almighty God, who after the creation of the world rested from all your
+          works and sanctified a day of rest for all your creatures: Grant that
+          we, putting away all earthly anxieties, may be duly prepared for the
+          service of your sanctuary, and that our rest here upon earth may be a
+          preparation for the eternal rest promised to your people in heaven;
+          through Jesus Christ our Lord. <Italic>Amen.</Italic>{' '}
+        </BcpText>
+        <Spacer />
+
+        <BcpText>
+          {'\n'}
+          <Italic>A Collect for the Renewal of Life </Italic>
+        </BcpText>
+        <Spacer />
+
+        <BcpText>
+          O God, the King eternal, whose light divides the day from the night
+          and turns the shadow of death into the morning: Drive far from us all
+          wrong desires, incline our hearts to keep your law, and guide our feet
+          into the way of peace; that, having done your will with cheerfulness
+          during the day, we may, when night comes, rejoice to give you thanks;
+          through Jesus Christ our Lord. <Italic>Amen.</Italic>{' '}
+        </BcpText>
+        <Spacer />
+
+        <BcpText>
+          {'\n'}
+          <Italic>A Collect for Peace </Italic>
+        </BcpText>
+        <Spacer />
+
+        <BcpText>
+          O God, the author of peace and lover of concord, to know you is
+          eternal life and to serve you is perfect freedom: Defend us, your
+          humble servants, in all assaults of our enemies; that we, surely
+          trusting in your defense, may not fear the power of any adversaries;
+          through the might of Jesus Christ our Lord.
+          <Italic>Amen.</Italic>
+        </BcpText>
+        <Spacer />
+
+        <BcpText>
+          <Italic>A Collect for Grace </Italic>
+        </BcpText>
+        <Spacer />
+
+        <BcpText>
+          Lord God, almighty and everlasting Father, you have brought us in
+          safety to this new day: Preserve us with your mighty power, that we
+          may not fall into sin, nor be overcome by adversity; and in all we do,
+          direct us to the fulfilling of your purpose; through Jesus Christ our
+          Lord. <Italic>Amen. </Italic>
+        </BcpText>
+        <Spacer />
+
+        <BcpText>
+          {'\n'}
+          <Italic>A Collect for Guidance </Italic>
+        </BcpText>
+        <Spacer />
+
+        <BcpText>
+          Heavenly Father, in you we live and move and have our being: We humbly
+          pray you so to guide and govern us by your Holy Spirit, that in all
+          the cares and occupations of our life we may not forget you, but may
+          remember that we are ever walking in your sight; through Jesus Christ
+          our Lord.
+          <Italic>Amen.</Italic>
+        </BcpText>
+        <Spacer />
+
+        <SmallItalic>
+          Then, unless the Eucharist or a form of general intercession is to
+          follow, one of these prayers for mission is added
+        </SmallItalic>
+        <Spacer />
+
+        <BcpText>
+          Almighty and everlasting God, by whose Spirit the whole body of your
+          faithful people is governed and sanctified: Receive our supplications
+          and prayers which we offer before you for all members of your holy
+          Church, that in their vocation and ministry they may truly and
+          devoutly serve you; through our Lord and Savior Jesus Christ.{' '}
+          <Italic>Amen.</Italic>
+        </BcpText>
+        <Spacer />
+
+        <SmallItalic>or this</SmallItalic>
+        <Spacer />
+
+        <BcpText>
+          O God, you have made of one blood all the peoples of the earth, and
+          sent your blessed Son to preach peace to those who are far off and to
+          those who are near: Grant that people everywhere may seek after you
+          and find you; bring the nations into your fold; pour out your Spirit
+          upon all flesh; and hasten the coming of your kingdom; through Jesus
+          Christ our Lord. <Italic>Amen</Italic>.{' '}
+        </BcpText>
+        <Spacer />
+
+        <SmallItalic>or the following</SmallItalic>
+        <Spacer />
+
+        <BcpText>
+          Lord Jesus Christ, you stretched out your arms of love on the hard
+          wood of the cross that everyone might come within the reach of your
+          saving embrace: So clothe us in your Spirit that we, reaching forth
+          our hands in love, may bring those who do not know you to the
+          knowledge and love of you; for the honor of your Name.{' '}
+          <Italic>Amen.</Italic>{' '}
+        </BcpText>
+        <Spacer />
+
+        <SmallItalic>Here may be sung a hymn or anthem.</SmallItalic>
+        <Spacer />
+
+        <SmallItalic>
+          Authorized intercessions and thanksgivings may follow.
+        </SmallItalic>
+        <Spacer />
+
+        <SmallItalic>
+          Before the close of the Office one or both of the following may be
+          used
+        </SmallItalic>
+        <Spacer />
+
+        <Italic> The General Thanksgiving</Italic>
+        <Spacer />
+
+        <SmallItalic>Officiant and People</SmallItalic>
+        <Spacer />
+
+        <BcpText>
+          Almighty God, Father of all mercies, we your unworthy servants give
+          you humble thanks for all your goodness and loving-kindness to us and
+          to all whom you have made. We bless you for our creation,
+          preservation, and all the blessings of this life; but above all for
+          your immeasurable love in the redemption of the world by our Lord
+          Jesus Christ; for the means of grace, and for the hope of glory. And,
+          we pray, give us such an awareness of your mercies, that with truly
+          thankful hearts we may show forth your praise, not only with our lips,
+          but in our lives, by giving up our selves to your service, and by
+          walking before you in holiness and righteousness all our days; through
+          Jesus Christ our Lord, to whom, with you and the Holy Spirit, be honor
+          and glory throughout all ages. Amen.
+        </BcpText>
+        <Spacer />
+
+        <BcpText>
+          <Italic>A Prayer of St. Chrysostom </Italic>
+        </BcpText>
+        <Spacer />
+
+        <BcpText>
+          Almighty God, you have given us grace at this time with one accord to
+          make our common supplication to you; and you have promised through
+          your well-beloved Son that when two or three are gathered together in
+          his Name you will be in the midst of them: Fulfill now, O Lord, our
+          desires and petitions as may be best for us; granting us in this world
+          knowledge of your truth, and in the age to come life everlasting.{' '}
+          <Italic>Amen.</Italic>
+        </BcpText>
+        <Spacer />
+
+        <SmallItalic>Then may be said</SmallItalic>
+        <Spacer />
+
+        <BcpText>
+          Let us bless the Lord. {'\n'}
+          <Italic>Thanks be to God.</Italic>{' '}
+        </BcpText>
+        <Spacer />
+
+        <SmallItalic>
+          From Easter Day through the Day of Pentecost "Alleluia, alleluia" may
+          be added to the preceding versicle and response.
+        </SmallItalic>
+        <Spacer />
+
+        <SmallItalic>
+          The Officiant may then conclude with one of the following
+        </SmallItalic>
+        <Spacer />
+
+        <BcpText>
+          The grace of our Lord Jesus Christ, and the love of God, and the
+          fellowship of the Holy Spirit, be with us all evermore.{' '}
+          <Italic>Amen.</Italic>
+          {'    '}
+          <SmallItalic>2 Corinthians 13:14 </SmallItalic>
+        </BcpText>
+        <Spacer />
+
+        <BcpText>
+          May the God of hope fill us with all joy and peace in believing
+          through the power of the Holy Spirit. <Italic>Amen.</Italic>
+          {'    '}
+          <SmallItalic>Romans 15:13 </SmallItalic>
+        </BcpText>
+        <Spacer />
+
+        <BcpText>
+          Glory to God whose power, working in us, can do infinitely more than
+          we can ask or imagine: Glory to him from generation to generation in
+          the Church, and in Christ Jesus for ever and ever.{' '}
+          <Italic>Amen.</Italic>
+          {'    '}
+          <SmallItalic>Ephesians 3:20,21</SmallItalic>
+        </BcpText>
+        <Spacer />
+        <Spacer />
       </ScrollView>
     </SafeAreaView>
   );

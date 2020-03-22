@@ -8,49 +8,43 @@ import Bold from '../shared/Bold';
 import SmallBcpText from '../shared/SmallBcpText';
 import Spacer from '../shared/Spacer';
 
-const Canticle8 = ({navigator, name}) => {
+const Canticle18 = ({navigator, name}) => {
   return (
     <View>
       <BcpText>
-        <Bold>10</Bold>
+        {'\n'}
+        <Bold>18</Bold>
         {'    '}
-        <Bold>The Second Song of Isaiah</Bold>
-        {'       '} <Italic>Quaerite Dominum</Italic> {'\n'}
+        <Bold>A Song to the Lamb</Bold>
+        {'    '}
+        <Italic>Dignus es</Italic> {'\n'}
         {'       '}
         {'   '}
-        <SmallItalic>Isaiah 55:6-11</SmallItalic>{' '}
+        <SmallItalic>Revelation 4:11, 5:9-10, 13</SmallItalic>
       </BcpText>
 
       <BcpText>
-        Seek the Lord while he wills to be found; * {'\n'}
-        {'    '}call upon him when he draws near. {'\n'}
-        Let the wicked forsake their ways * {'\n'}
-        {'    '}and the evil ones their thoughts; {'\n'}
-        And let them turn to the Lord, and he will have compassion, * {'\n'}
-        {'    '}and to our God, for he will richly pardon. {'\n'}
-        For my thoughts are not your thoughts, * {'\n'}
-        {'    '}nor your ways my ways, says the Lord. {'\n'}
-        For as the heavens are higher than the earth, * {'\n'}
-        {'    '}so are my ways higher than your ways, {'\n'}
-        {'    '}and my thoughts than your thoughts.{' '}
+        Splendor and honor and kingly power * {'\n'}
+        {'    '}are yours by right, O Lord our God, {'\n'}
+        For you created everything that is, * {'\n'}
+        {'    '}and by your will they were created and have their being;{' '}
       </BcpText>
+      <Spacer />
+
 
       <BcpText>
-        For as rain and snow fall from the heavens * {'\n'}
-        {'    '}and return not again, but water the earth, {'\n'}
-        Bringing forth life and giving growth, * {'\n'}
-        {'    '}seed for sowing and bread for eating, {'\n'}
-        So is my word that goes forth from my mouth; * {'\n'}
-        {'    '}it will not return to me empty; {'\n'}
-        But it will accomplish that which I have purposed, * {'\n'}
-        {'    '}and prosper in that for which I sent it.{' '}
+        And yours by right, O Lamb that was slain, * {'\n'}
+        {'    '}for with your blood you have redeemed for God, {'\n'}
+        From every family, language, people, and nation, * {'\n'}
+        {'    '}a kingdom of priests to serve our God.{' '}
       </BcpText>
-
       <Spacer />
 
       <BcpText>
-        Glory to the Father, and to the Son, and to the Holy Spirit: as it was
-        in the beginning, is now, and will be for ever. Amen.
+        And so, to him who sits upon the throne, * {'\n'}
+        {'    '}and to Christ the Lamb, {'\n'}
+        Be worship and praise, dominion and splendor, * {'\n'}
+        {'    '}for ever and for evermore.{' '}
       </BcpText>
     </View>
   );
@@ -63,4 +57,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Canticle8;
+export default Canticle18;
