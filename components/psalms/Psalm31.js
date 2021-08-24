@@ -12,7 +12,7 @@ import BcpText from '../shared/BcpText';
 import PsalmHeader from './PsalmHeader';
 
 const Psalm31 = ({navigator, name}) => {
-  const psalmText = { html: `<p>1
+  const psalmText = {html: `<p>1
   &nbsp;&nbsp; In you, O L<span style="font-size: small">ORD</span>, have I taken refuge;<br>
   &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; let me never be put to shame: *<br>
   &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; deliver me in your righteousness.</p>

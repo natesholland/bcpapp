@@ -1,12 +1,18 @@
 import React from 'react';
-import {SafeAreaView, ScrollView, StyleSheet} from 'react-native';
-import HTML from 'react-native-render-html';
+import {
+  SafeAreaView,
+  ScrollView,
+  StyleSheet,
+  useWindowDimensions,
+} from 'react-native';
+import RenderHTML from 'react-native-render-html';
 
 import BcpText from '../shared/BcpText';
 import PsalmHeader from './PsalmHeader';
 
 const Psalm91 = ({navigator, name}) => {
-  const psalmText = `
+  const psalmText = {
+    html: `
   <p>1
 &nbsp;&nbsp; He who dwells in the shelter of the Most High *<br/>
 &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; abides under the shadow of the Almighty.<br/>
@@ -79,12 +85,15 @@ const Psalm91 = ({navigator, name}) => {
 &nbsp;&nbsp; With long life will I satisfy him, *<br/>
 &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;and show him my salvation.<br/>
 <br/><br/></p>
-`
+`,
+  };
+
+  const {width} = useWindowDimensions();
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.container}>
         <PsalmHeader title="Psalm 91" annotation="Qui habitat" />
-        <HTML html={psalmText} />
+        <RenderHTML contentWidth={width} source={psalmText} />
         <BcpText />
       </ScrollView>
     </SafeAreaView>
