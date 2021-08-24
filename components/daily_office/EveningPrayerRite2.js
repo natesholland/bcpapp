@@ -15,6 +15,7 @@ import Spacer from '../shared/Spacer';
 import People from '../shared/People';
 import LordsPrayer from '../shared/LordsPrayer';
 import Officiant from '../shared/Officiant';
+import DailyReadings from '../shared/DailyReadings';
 
 const Compline = ({navigation, name}) => {
   return (
@@ -212,6 +213,7 @@ const Compline = ({navigation, name}) => {
           {'\n'}
         </BcpText>
         <SubTitle>The Lessons</SubTitle>
+        <DailyReadings />
         <SmallItalic>
           One or two lessons, as appointed, are read, the Reader first saying
         </SmallItalic>
