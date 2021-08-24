@@ -1,12 +1,18 @@
 import React from 'react';
-import {SafeAreaView, ScrollView, StyleSheet} from 'react-native';
-import HTML from 'react-native-render-html';
+import {
+  SafeAreaView,
+  ScrollView,
+  StyleSheet,
+  useWindowDimensions,
+} from 'react-native';
+import RenderHtml from 'react-native-render-html';
+import {Text} from 'react-native';
 
 import BcpText from '../shared/BcpText';
 import PsalmHeader from './PsalmHeader';
 
 const Psalm31 = ({navigator, name}) => {
-  const psalmText = `<p>1
+  const psalmText = { html: `<p>1
   &nbsp;&nbsp; In you, O L<span style="font-size: small">ORD</span>, have I taken refuge;<br>
   &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; let me never be put to shame: *<br>
   &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; deliver me in your righteousness.</p>
@@ -24,13 +30,15 @@ const Psalm31 = ({navigator, name}) => {
 &nbsp;&nbsp; Into your hands I commend my spirit, *<br>
 &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; for you have redeemed me,<br>
 &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; O L<span style="font-size: small">ORD</span>, O God of truth.<br>
-<br><br></p>`;
+<br><br></p>` };
+
+  const { width } = useWindowDimensions();
 
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.container}>
         <PsalmHeader title="Psalm 31" annotation="In te, Domine, speravi" />
-        <HTML html={psalmText} />
+        <RenderHtml contentWidth={width} source={psalmText} />
         <BcpText />
       </ScrollView>
     </SafeAreaView>
