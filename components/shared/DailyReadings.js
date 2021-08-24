@@ -74,7 +74,7 @@ const getWeek = (date) => {
       date.valueOf() >= w.date.valueOf() &&
       date.valueOf() < w.date.valueOf() + 604800000
     );
-  })[0]; 
+  })[0];
   if (prevMonthWeek != null) { return prevMonthWeek; }
   return null;
 }
@@ -122,16 +122,6 @@ const DailyReadings = () => {
   const date = new Date();
   // const date = new Date('2020-12-26T18:00:00.000Z')
 
-
-  const dates = [];
-  date.setDate(date.getDate() + 0) 
-  // for (i = 0; i < 10; i++) { 
-  //   dates.push(new Date(date.setDate(date.getDate() + 1)))
-  // }
-
-
-  const nextDay = new Date(date.setDate(date.getDate() + 42));
-  console.log(getDay(nextDay));
   return(
     <>
       {/* <Text>The lessons of today are: </Text>
@@ -139,20 +129,10 @@ const DailyReadings = () => {
       <Text>Second Reading: {getSecondLesson(date)}</Text>
       <Text>Gospel Reading: {getGospelLesson(date)}</Text> */}
 
-      <Text>{getWeek(nextDay).lectionaryShortName}</Text>
-      <Text>First Reading: {getFirstMorningLesson(nextDay)}</Text> 
-      <Text>{nextDay.toDateString()}</Text>
+      <Text>{getWeek(date).lectionaryShortName}</Text>
+      <Text>First Reading: {getFirstMorningLesson(date)}</Text>
+      <Text>{date.toDateString()}</Text>
 
-      {/* {dates.map((day, index) => {
-        console.log(day.toDateString())
-        // return <Text key={day.valueOf()}>{getWeek(day).lectionaryShortName}</Text>
-        return (
-          <>
-            <Text>{day.toDateString()}</Text>
-            <Text key={day.valueOf()}>First Reading: {getFirstMorningLesson(day)}</Text>
-          </>
-        )
-      })} */}
     </>
   );
 };
