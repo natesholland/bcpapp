@@ -31,10 +31,9 @@ import BcpText from './BcpText';
 import Holidays from './data/Holidays';
 import YearOne from './data/YearOne';
 import YearTwo from './data/YearTwo';
-import { get } from 'react-native/Libraries/Utilities/PixelRatio';
 
 const getYear = (date) => {
-  if (date.lectionaryYear === "A") {
+  if (date.lectionaryYear === 'A') {
     return YearOne();
   } else {
     return YearTwo();
@@ -42,82 +41,117 @@ const getYear = (date) => {
 };
 
 const getSpecificDay = (date) => {
-  const months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ]
-  return(`${months[date.getMonth()]} ${date.getDate()}`);
-
-}
+  const months = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec',
+  ];
+  return `${months[date.getMonth()]} ${date.getDate()}`;
+};
 
 const getWeekDay = (date) => {
-  const weekdays = [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ]
+  const weekdays = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+  ];
   const day = date.getDay();
   return weekdays[day];
-}
+};
 
 const getWeek = (date) => {
   let prevLectio;
   const year = date.getYear() + 1900;
   const month = date.getMonth();
   const lectio = lectionary(year, month);
-  if (month == 1) {
+  if (month === 1) {
     prevLectio = lectionary(year - 1, 12);
   } else {
     prevLectio = lectionary(year, month - 1);
   }
-  const week = lectio.filter(w => {
+  const week = lectio.filter((w) => {
     return (
       date.valueOf() >= w.date.valueOf() &&
       date.getDate() < w.date.valueOf() + 604800000
     );
   })[0];
-  if (week != null) { return week; }
-  const prevMonthWeek = prevLectio.filter(w => {
+  if (week != null) {
+    return week;
+  }
+  const prevMonthWeek = prevLectio.filter((w) => {
     return (
       date.valueOf() >= w.date.valueOf() &&
       date.valueOf() < w.date.valueOf() + 604800000
     );
   })[0];
-  if (prevMonthWeek != null) { return prevMonthWeek; }
+  if (prevMonthWeek != null) {
+    return prevMonthWeek;
+  }
   return null;
-}
+};
 
 const getDay = (date) => {
   const week = getWeek(date);
   // check for a Holiday
-  const holiday = Holidays().filter(day => day.day === getSpecificDay(date))[0]
-  if (holiday) { return holiday };
+  const holiday = Holidays().filter(
+    (day) => day.day === getSpecificDay(date),
+  )[0];
+  if (holiday) {
+    return holiday;
+  }
   // check any other special days
-  const specificDay= getYear(date).filter(day => day.day === getSpecificDay(date))[0]
-  if (specificDay) { return specificDay; }
+  const specificDay = getYear(date).filter(
+    (day) => day.day === getSpecificDay(date),
+  )[0];
+  if (specificDay) {
+    return specificDay;
+  }
   // Otherwise give us the regular day of the week
-  return getYear(date).filter(day => day.week === week.lectionaryShortName && day.day === getWeekDay(date))[0]
-}
+  return getYear(date).filter(
+    (day) =>
+      day.week === week.lectionaryShortName && day.day === getWeekDay(date),
+  )[0];
+};
 
-const getFirstMorningLesson = (date) => {
+export const getFirstMorningLesson = (date) => {
   const day = getDay(date);
   if (day == null) {
-    return "";
+    return '';
   }
   if (day.lessons.morning != null) {
     return day.lessons.morning.first;
   }
   return day.lessons.first;
-}
+};
 
-const getSecondLesson = (date) => {
+export const getSecondLesson = (date) => {
   const day = getDay(date);
   if (day == null) {
-    return "";
+    return '';
   }
   return day.lessons.second;
-}
+};
 
-const getGospelLesson = (date) => {
+export const getGospelLesson = (date) => {
   const day = getDay(date);
   if (day == null) {
-    return "";
+    return '';
   }
-  return day.lessons.gospel
-}
+  return day.lessons.gospel;
+};
 
 const DailyReadings = () => {
   const date = new Date();

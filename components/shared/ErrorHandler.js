@@ -1,6 +1,6 @@
-import * as React from "react";
-import { ErrorBoundary } from "react-error-boundary";
-import { View, StyleSheet, Button } from "react-native";
+import * as React from 'react';
+import {ErrorBoundary} from 'react-error-boundary';
+import {View, StyleSheet, Button} from 'react-native';
 
 import BcpText from './BcpText';
 
@@ -30,10 +30,10 @@ const ErrorHandler = ({children}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: "column",
-    alignItems: "stretch",
-    justifyContent: "center",
-    alignContent: "center",
+    flexDirection: 'column',
+    alignItems: 'stretch',
+    justifyContent: 'center',
+    alignContent: 'center',
     paddingHorizontal: 12,
   },
 });
