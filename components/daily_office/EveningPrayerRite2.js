@@ -214,6 +214,7 @@ const Compline = ({navigation, name}) => {
         </BcpText>
         <SubTitle>The Lessons</SubTitle>
         <DailyReadings />
+        <Spacer />
         <SmallItalic>
           One or two lessons, as appointed, are read, the Reader first saying
         </SmallItalic>

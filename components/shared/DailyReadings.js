@@ -24,7 +24,9 @@
  */
 import React from 'react';
 import lectionary from 'lectionary';
-import { Text } from 'react-native';
+
+import ErrorHandler from './ErrorHandler';
+import BcpText from './BcpText';
 
 import Holidays from './data/Holidays';
 import YearOne from './data/YearOne';
@@ -34,11 +36,10 @@ import { get } from 'react-native/Libraries/Utilities/PixelRatio';
 const getYear = (date) => {
   if (date.lectionaryYear === "A") {
     return YearOne();
-  // eslint-disable-next-line no-else-return
   } else {
     return YearTwo();
   }
-}
+};
 
 const getSpecificDay = (date) => {
   const months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ]
@@ -122,18 +123,12 @@ const DailyReadings = () => {
   const date = new Date();
   // const date = new Date('2020-12-26T18:00:00.000Z')
 
-  return(
-    <>
-      {/* <Text>The lessons of today are: </Text>
-      <Text>First Reading: {getFirstMorningLesson(date)}</Text>
-      <Text>Second Reading: {getSecondLesson(date)}</Text>
-      <Text>Gospel Reading: {getGospelLesson(date)}</Text> */}
-
-      <Text>{getWeek(date).lectionaryShortName}</Text>
-      <Text>First Reading: {getFirstMorningLesson(date)}</Text>
-      <Text>{date.toDateString()}</Text>
-
-    </>
+  return (
+    <ErrorHandler>
+      <BcpText>{getWeek(date).lectionaryShortName}</BcpText>
+      <BcpText>First Reading: {getFirstMorningLesson(date)}</BcpText>
+      <BcpText>{date.toDateString()}</BcpText>
+    </ErrorHandler>
   );
 };
 
