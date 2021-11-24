@@ -35,12 +35,12 @@ android_library(
 
 android_build_config(
     name = "build_config",
-    package = "com.bcpapp",
+    package = "com.bcpappfresh",
 )
 
 android_resource(
     name = "res",
-    package = "com.bcpapp",
+    package = "com.bcpappfresh",
     res = "src/main/res",
 )
 
