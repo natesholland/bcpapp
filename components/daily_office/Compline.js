@@ -12,12 +12,17 @@ import Spacer from '../shared/Spacer';
 import People from '../shared/People';
 import Officiant from '../shared/Officiant';
 import Title from '../shared/Title';
+import { BibleVerse } from '../shared/BibleVerse';
 
 const Compline = ({navigation, name}) => {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.container}>
         <Title>An Order for Compline</Title>
+
+        {/* <Spacer />
+        <BibleVerse book={'mark'} chapter={1} verses={'1-5'} />
+        <Spacer /> */}
 
         <SmallItalic>The Officiant begins</SmallItalic>
         <Spacer />
